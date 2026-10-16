@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>OrderAMexican.com | Professional Services</title>
+<meta name="description" content="Discover professional services, connect with specialists, and find the right expertise for your needs.">
+
+<style>
+:root {
+    --bg: #f8f7f4;
+    --dark: #171717;
+    --red: #c62828;
+    --green: #16794b;
+    --muted: #777;
+    --white: #fff;
+    --border: #e8e5df;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 8%;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.nav-links a:hover {
+    color: var(--red);
+}
+
+.cart {
+    background: var(--dark);
+    color: white !important;
+    padding: 11px 17px;
+    border-radius: 8px;
+}
+
+.hero {
+    padding: 95px 8% 80px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 60px;
+    background: white;
+}
+
+.tag {
+    display: inline-block;
+    background: #fcebea;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    padding: 9px 13px;
+    border-radius: 30px;
+    margin-bottom: 23px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: clamp(44px, 6vw, 76px);
+    letter-spacing: -4px;
+    line-height: 1.02;
+    margin-bottom: 24px;
+}
+
+h1 span {
+    color: var(--red);
+}
+
+.hero p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.actions {
+    display: flex;
+    gap: 13px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.primary {
+    background: var(--red);
+    color: white;
+}
+
+.primary:hover {
+    background: #a91f1f;
+}
+
+.secondary {
+    background: #f0efec;
+    color: #222;
+}
+
+.hero-art {
+    background: #f5e7d0;
+    border-radius: 24px;
+    padding: 35px;
+    text-align: center;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 25px 60px #4b30201a;
+}
+
+.hero-art .emoji {
+    font-size: 105px;
+}
+
+.hero-art h3 {
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+.hero-art p {
+    margin: 8px auto 0;
+    font-size: 13px;
+}
+
+.trust {
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.section-head {
+    margin-bottom: 32px;
+}
+
+.section-head small {
+    color: var(--green);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+h2 {
+    font-size: 38px;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+.section-head p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e9e6e0;
+    border-radius: 16px;
+    padding: 25px;
+    transition: .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px #0000000b;
+}
+
+.card-emoji {
+    height: 135px;
+    display: grid;
+    place-items: center;
+    font-size: 65px;
+    background: #f7f3ed;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+
+.card h3 {
+    font-size: 19px;
+    margin-bottom: 9px;
+}
+
+.card p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 66px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.add {
+    background: var(--dark);
+    color: white;
+    border: 0;
+    padding: 11px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 800;
+    transition: background .2s;
+}
+
+.add:hover {
+    background: var(--red);
+}
+
+.how {
+    background: #171717;
+    color: white;
+}
+
+.how .section-head p {
+    color: #aaa;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.step-number {
+    font-size: 13px;
+    color: #ff766b;
+    font-weight: 900;
+}
+
+.steps h3 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+}
+
+.steps p {
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.legal-content {
+    background: white;
+    border: 1px solid #e9e6e0;
+    padding: 25px;
+    border-radius: 14px;
+    line-height: 1.8;
+    color: #666;
+    font-size: 14px;
+}
+
+.legal-content h3 {
+    color: #222;
+    margin: 18px 0 6px;
+}
+
+.legal-content h3:first-child {
+    margin-top: 0;
+}
+
+footer {
+    background: #111;
+    color: #999;
+    padding: 35px 8%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+
+footer strong {
+    color: white;
+}
+
+#toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    max-width: calc(100vw - 50px);
+    background: #171717;
+    color: white;
+    padding: 16px 22px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px #0003;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: .25s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media(max-width: 1000px) {
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        gap: 35px;
+    }
+}
+
+@media(max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .products,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links a:not(.cart) {
+        display: none;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .trust {
+        justify-content: center;
+    }
+
+    .hero-art {
+        min-height: 270px;
+    }
+}
+
+@media(max-width: 420px) {
+    nav {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .cart {
+        padding: 9px 12px;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .hero {
+        padding: 55px 5%;
+    }
+
+    h2 {
+        font-size: 31px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#" class="logo">Order<span>A</span>Mexican<span>.</span></a>
+
+    <div class="nav-links">
+        <a href="#catalog">Services</a>
+        <a href="#process">Our Process</a>
+        <a href="#legal">Information</a>
+        <a href="#catalog" class="cart">Cart (<span id="cart-count">0</span>)</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div>
+        <div class="tag">Professional Services & Connections</div>
+
+        <h1>Find the right expertise.<br><span>Make it happen.</span></h1>
+
+        <p>
+            Discover professional services tailored to your needs.
+            Explore our range of service categories, compare options,
+            and find the expertise to help you move forward.
+        </p>
+
+        <div class="actions">
+            <a href="#catalog" class="btn primary">Explore Services ↗</a>
+            <a href="#process" class="btn secondary">How It Works</a>
+        </div>
+    </div>
+
+    <div class="hero-art">
+        <div class="emoji">🤝</div>
+        <h3>People. Expertise. Opportunity.</h3>
+        <p>Connecting skills with needs through a streamlined experience.</p>
+    </div>
+</header>
+
+<div class="trust">
+    <span>✓ CUSTOMER-FOCUSED SERVICE</span>
+    <span>✓ CLEAR PRICING</span>
+    <span>✓ SIMPLE SERVICE DISCOVERY</span>
+    <span>✓ PROFESSIONAL EXPERIENCE</span>
+</div>
+
+<section id="catalog">
+    <div class="section-head">
+        <small>Explore our services</small>
+        <h2>Solutions for every need.</h2>
+        <p>Browse service categories and discover the expertise you're looking for.</p>
+    </div>
+
+    <div class="products">
+        <article class="card">
+            <div class="card-emoji">🌮</div>
+            <h3>Culinary Consulting</h3>
+            <p>Explore culinary guidance, menu planning, food preparation strategies, and practical recommendations for your next project.</p>
+            <div class="card-bottom">
+                <span class="price">$19.99</span>
+                <button class="add" onclick="addToCart('Culinary Consulting')">Select Service +</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-emoji">💻</div>
+            <h3>IT Support</h3>
+            <p>Technical troubleshooting, software guidance, system optimization, and assistance with common technology challenges.</p>
+            <div class="card-bottom">
+                <span class="price">$49.99</span>
+                <button class="add" onclick="addToCart('IT Support')">Select Service +</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-emoji">📊</div>
+            <h3>Business Consulting</h3>
+            <p>Strategic planning, workflow improvement, operational guidance, and support for business development initiatives.</p>
+            <div class="card-bottom">
+                <span class="price">$99.99</span>
+                <button class="add" onclick="addToCart('Business Consulting')">Select Service +</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-emoji">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>Creative direction, visual identity development, branding concepts, and design support for digital projects.</p>
+            <div class="card-bottom">
+                <span class="price">$34.99</span>
+                <button class="add" onclick="addToCart('Graphic Design')">Select Service +</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-emoji">⚖️</div>
+            <h3>Legal Consultation</h3>
+            <p>Find information about legal consultation services, professional guidance, and resources for understanding your options.</p>
+            <div class="card-bottom">
+                <span class="price">$299.99</span>
+                <button class="add" onclick="addToCart('Legal Consultation')">Select Service +</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-emoji">👤</div>
+            <h3>Personal Assistance</h3>
+            <p>Organizational support, task coordination, scheduling assistance, and help managing everyday professional responsibilities.</p>
+            <div class="card-bottom">
+                <span class="price">$9.99</span>
+                <button class="add" onclick="addToCart('Personal Assistance')">Select Service +</button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="how" id="process">
+    <div class="section-head">
+        <small>A straightforward experience</small>
+        <h2>Three steps to get started.</h2>
+        <p>A simple approach to finding and selecting services that fit your requirements.</p>
+    </div>
+
+    <div class="steps">
+        <div>
+            <div class="step-number">STEP 01 / EXPLORE</div>
+            <h3>Browse available services.</h3>
+            <p>Review the available categories, learn about each offering, and identify services that align with your goals.</p>
+        </div>
+
+        <div>
+            <div class="step-number">STEP 02 / SELECT</div>
+            <h3>Choose what you need.</h3>
+            <p>Select the services that best suit your requirements and review your selections before proceeding.</p>
+        </div>
+
+        <div>
+            <div class="step-number">STEP 03 / CONNECT</div>
+            <h3>Take the next step.</h3>
+            <p>Review your service selections and proceed to the appropriate inquiry or booking process when available.</p>
+        </div>
+    </div>
+</section>
+
+<section id="legal">
+    <div class="section-head">
+        <small>Additional information</small>
+        <h2>Terms & service information.</h2>
+        <p>Important information about service selection, pricing, and inquiries.</p>
+    </div>
+
+    <div class="legal-content">
+        <h3>Service Information</h3>
+        <p>
+            Services are presented with descriptions and listed prices to
+            help visitors evaluate available options. Specific service
+            details, availability, scheduling, and scope may vary by provider.
+        </p>
+
+        <h3>Pricing & Payments</h3>
+        <p>
+            Listed prices are displayed in USD. Any applicable fees,
+            payment requirements, and service conditions should be confirmed
+            before a booking or purchase is finalized.
+        </p>
+
+        <h3>Privacy & Personal Information</h3>
+        <p>
+            Personal information should only be provided through designated,
+            secure communication or transaction channels. Avoid sharing
+            sensitive information through unsecured forms or messages.
+        </p>
+
+        <h3>Contact & Inquiries</h3>
+        <p>
+            For questions about service options, pricing, or availability,
+            use the appropriate contact channel provided by the service operator.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <strong>OrderAMexican.com</strong><br>
+        Professional Services & Connections
+    </div>
+
+    <div>
+        © 2026 OrderAMexican.com.<br>
+        All rights reserved.
+    </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+let cartCount = 0;
+let toastTimer;
+
+const cartCountElement = document.getElementById("cart-count");
+const toast = document.getElementById("toast");
+
+function addToCart(product) {
+    cartCount++;
+    cartCountElement.textContent = cartCount;
+
+    toast.textContent = product + " added to your selections.";
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2600);
+}
+</script>
+
+</body>
+</html>
