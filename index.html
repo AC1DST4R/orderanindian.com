@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +16,8 @@ button,a{-webkit-tap-highlight-color:transparent}
 button{cursor:pointer}
 a{color:inherit}
 nav{display:flex;align-items:center;justify-content:space-between;padding:20px 8%;background:linear-gradient(90deg,#fff 0%,#fff8eb 50%,#fff 100%);border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#ff9933 0 33%,white 33% 66%,#13804a 66%) 1;gap:20px}
-.logo{font-size:23px;font-weight:900;letter-spacing:-1px;text-decoration:none;white-space:nowrap}
+.logo{font-size:23px;font-weight:900;letter-spacing:-1px;text-decoration:none;white-space:nowrap;text-shadow:1px 1px 0 #f2b63230}
 .logo span{color:var(--red)}
-.logo{ text-shadow:1px 1px 0 #f2b63230 }
 .nav-links{display:flex;align-items:center;gap:23px}
 .nav-links a{text-decoration:none;color:#444;font-size:14px;font-weight:600}
 .nav-links a:hover{color:var(--red)}
@@ -33,18 +33,19 @@ h1 span{color:var(--red)}
 .primary{background:var(--red);color:white}
 .primary:hover{background:#a91f1f}
 .secondary{background:#f0efec;color:#222}
-.hero-art{background:linear-gradient(145deg,#16804a,#075c35);color:#fff;border:5px solid #ff9933;border-radius:24px;padding:35px;text-align:center;min-height:320px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 25px 60px #4b30201a;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"✦  ❋  ✧  ❋  ✦";position:absolute;left:0;right:0;color:#ffcf70;letter-spacing:12px;font-size:18px;opacity:.8}.hero-art:before{top:12px}.hero-art:after{bottom:12px}.hero-art h3{color:#ffe2a6}
-.hero-art .emoji{font-size:95px}
-.hero-art h3{margin-top:15px;font-size:23px}
-.hero-art p{margin:8px auto 0;font-size:13px}
+.hero-art{background:linear-gradient(145deg,#16804a,#075c35);color:#fff;border:5px solid #ff9933;border-radius:24px;padding:35px;text-align:center;min-height:320px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 25px 60px #4b30201a;position:relative;overflow:hidden}
+.hero-art:before,.hero-art:after{content:"✦  ❋  ✧  ❋  ✦";position:absolute;left:0;right:0;color:#ffcf70;letter-spacing:12px;font-size:18px;opacity:.8}
+.hero-art:before{top:12px}
+.hero-art:after{bottom:12px}
+.hero-art h3{color:#ffe2a6;margin-top:15px;font-size:23px}
+.hero-art .emoji{font-size:75px}
+.hero-art p{margin:8px auto 0;font-size:13px;color:#fff}
 .trust{padding:23px 8%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--border);color:var(--green);background:#fffdf6;font-size:11px;font-weight:900}
 section{padding:70px 8%}
 #catalog{background:linear-gradient(180deg,#fff8e8,#fffdf7)}
-.section-head small{display:inline-block;padding:5px 10px;border-radius:5px;background:#e2f2e7;color:var(--green)}
-h2{color:var(--dark)}
 .section-head{margin-bottom:30px}
-.section-head small{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.5px}
-h2{font-size:clamp(29px,4vw,38px);letter-spacing:-1.3px;line-height:1.2;margin:10px 0}
+.section-head small{display:inline-block;padding:5px 10px;border-radius:5px;background:#e2f2e7;color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.5px}
+h2{font-size:clamp(29px,4vw,38px);letter-spacing:-1.3px;line-height:1.2;margin:10px 0;color:var(--dark)}
 .section-head p{color:var(--muted);line-height:1.7}
 .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .card{background:#fffefa;border:1px solid #e8d6b0;border-top:4px solid var(--red);border-radius:16px;padding:23px;transition:.2s;min-width:0;box-shadow:0 8px 22px #68461a0b}
@@ -62,11 +63,12 @@ h2{font-size:clamp(29px,4vw,38px);letter-spacing:-1.3px;line-height:1.2;margin:1
 .profile-info h3{font-size:21px}
 .profile-info p{font-size:13px;color:var(--muted);margin-top:5px}
 .how{background:linear-gradient(135deg,#174a30,#103521);color:white;border-top:6px solid var(--gold);border-bottom:6px solid var(--red)}
-.how .section-head p{color:#aaa}
+.how h2{color:white}
+.how .section-head p{color:#ddd}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
 .step-number{font-size:12px;color:#ffca72;font-weight:900}
 .steps h3{margin:13px 0 8px;font-size:19px}
-.steps p{color:#aaa;line-height:1.8;font-size:14px}
+.steps p{color:#ddd;line-height:1.8;font-size:14px}
 .info-panel{background:#fffefa;border:1px solid #e8d6b0;border-left:6px solid var(--green);padding:24px;border-radius:14px;color:#665c4e;font-size:14px;line-height:1.8}
 footer{background:linear-gradient(90deg,#e87519,#fff8eb 50%,#16804a);color:#26352c;padding:32px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;border-top:5px solid var(--gold)}
 footer strong{color:white}
@@ -83,7 +85,7 @@ footer strong{color:white}
 .quantity{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:9px}
 .quantity button{border:1px solid var(--border);background:white;border-radius:6px;width:29px;height:29px;font-weight:800}
 .remove{display:block;margin:8px 0 0 auto;border:0;background:none;color:var(--red);font-size:12px}
-.summary{background:white;border:1px solid var(--border);border-radius:14px;padding:23px;position:sticky;top:20px}
+.summary{background:white;border:1px solid var(--border);border-radius:14px;padding:23px;position:sticky;top:20px;min-width:0}
 .summary h3{margin-bottom:16px}
 .summary-line{display:flex;justify-content:space-between;gap:12px;margin:10px 0;color:#666;font-size:14px}
 .summary-total{border-top:1px solid var(--border);padding-top:15px;margin-top:16px;font-size:18px;font-weight:900;color:var(--dark)}
@@ -96,20 +98,21 @@ footer strong{color:white}
 .empty .emoji{font-size:55px}
 .empty p{color:var(--muted);margin:8px 0 20px}
 .checkout-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:25px;align-items:start}
-.panel{background:white;border:1px solid var(--border);border-radius:15px;padding:25px}
+.panel{background:white;border:1px solid var(--border);border-radius:15px;padding:25px;min-width:0}
 .panel h3{margin-bottom:8px}
 .panel-desc{font-size:13px;color:var(--muted);margin-bottom:20px}
-.field{margin-bottom:16px}
+.field{margin-bottom:16px;min-width:0}
 .field label{display:block;font-size:13px;font-weight:750;margin-bottom:6px}
-.field input{width:100%;padding:12px 13px;border:1px solid #ddd;border-radius:8px;background:white;outline:none}
-.field input:focus{border-color:var(--red);box-shadow:0 0 0 3px #c6282814}
-.field .error-msg{display:none;color:var(--red);font-size:12px;margin-top:6px;font-weight:700}
-.field.invalid input{border-color:var(--red)}
+.field input{width:100%;min-width:0;padding:12px 13px;border:1px solid #ddd;border-radius:8px;background:white;outline:none}
+.field input:focus{border-color:var(--red);box-shadow:0 0 0 3px #e8751914}
+.field .error-msg{display:none;color:#b42318;font-size:12px;margin-top:6px;font-weight:700}
+.field.invalid input{border-color:#b42318}
 .field.invalid .error-msg{display:block}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 .order-lines{display:grid;gap:12px}
 .order-line{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#666}
+.order-line strong{white-space:nowrap;color:var(--dark)}
 .processing{text-align:center;padding:70px 15px}
 .spinner{width:45px;height:45px;border:4px solid #eee;border-top-color:var(--red);border-radius:50%;margin:0 auto 22px;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -118,6 +121,7 @@ footer strong{color:white}
 .receipt{margin-top:28px;background:white;border:1px solid var(--border);border-radius:15px;padding:25px;text-align:left}
 .receipt-heading{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--border);padding-bottom:15px;margin-bottom:17px}
 .receipt-line{display:flex;justify-content:space-between;gap:15px;margin:10px 0;font-size:14px}
+.receipt-line strong{overflow-wrap:anywhere;text-align:right}
 .receipt-total{border-top:1px solid var(--border);padding-top:15px;margin-top:16px;font-size:18px;font-weight:900}
 .receipt-number{display:inline-block;background:#f3f3f3;padding:9px 12px;border-radius:7px;font-family:monospace;font-weight:800;overflow-wrap:anywhere}
 .receipt-note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.7}
@@ -128,9 +132,9 @@ footer strong{color:white}
 #toast.show{opacity:1;transform:translateY(0)}
 @media(max-width:1000px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.cart-layout,.checkout-layout{grid-template-columns:1fr}.summary{position:static}}
 @media(max-width:800px){nav{padding:18px 5%}.hero{grid-template-columns:1fr;padding:55px 5%;gap:30px}section{padding:55px 5%}.nav-links{gap:10px}.nav-links a:not(.cart-nav){display:none}.trust{justify-content:center}.steps{grid-template-columns:1fr}.hero-art{min-height:260px}}
-@media(max-width:520px){.products{grid-template-columns:1fr}.card-bottom{align-items:flex-start}.form-row,.form-row-3{grid-template-columns:1fr}.cart-item{grid-template-columns:1fr}.cart-item-right{text-align:left}.quantity{justify-content:flex-start}.remove{margin-left:0}.receipt-heading{flex-direction:column}h1{letter-spacing:-2px}}
+@media(max-width:520px){.products{grid-template-columns:1fr}.card-bottom{align-items:flex-start}.form-row,.form-row-3{grid-template-columns:1fr}.cart-item{grid-template-columns:1fr}.cart-item-right{text-align:left}.quantity{justify-content:flex-start}.remove{margin-left:0}.receipt-heading{flex-direction:column}h1{letter-spacing:-2px}.panel{padding:18px}.receipt{padding:17px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
-@media print{body{background:white}nav,footer,#toast,.actions,.back-btn{display:none!important}.view{display:none!important}#confirmation-view{display:block!important;min-height:0}#confirmation-view section{padding:0}.receipt{box-shadow:none;border:1px solid #ddd}}
+@media print{body{background:white}nav,footer,#toast,.actions,.back-btn,.demo-banner{display:none!important}.view{display:none!important}#confirmation-view{display:block!important;min-height:0}#confirmation-view section{padding:0}.receipt{box-shadow:none;border:1px solid #ddd}}
 </style>
 </head>
 <body>
@@ -148,7 +152,7 @@ footer strong{color:white}
 <div id="home-view" class="view active">
 <header class="hero">
 <div>
-<div class="tag">Professional Services & Connections</div>
+<div class="tag">Professional Services &amp; Connections</div>
 <h1>Find the right expertise.<br><span>Make it happen.</span></h1>
 <p>Discover professional services tailored to your needs. Explore available categories and find the expertise to help you move forward.</p>
 <div class="actions">
@@ -220,15 +224,21 @@ footer strong{color:white}
 <div id="checkout-view" class="view">
 <section>
 <button class="back-btn" onclick="showView('cart')">← Return to cart</button>
-<div class="page-heading"><h2>Checkout</h2><p>Review your order and enter your customer information.</p></div>
+<div class="page-heading"><h2>Checkout</h2><p>Enter your contact details before continuing to billing.</p></div>
 <div class="checkout-layout">
 <div class="panel">
 <h3>Customer Information</h3>
-<p class="panel-desc">Enter your details to complete your order.</p>
+<p class="panel-desc">Enter your details to continue.</p>
 <form id="checkout-form">
-<div class="field"><label for="customer-name">Customer Name</label><input id="customer-name" type="text" maxlength="80" autocomplete="name" required></div>
-<div class="field"><label for="customer-email">Email Address</label><input id="customer-email" type="email" maxlength="120" autocomplete="email" required></div>
-<button class="full-btn" id="pay-button" type="submit">Continue to Payment →</button>
+<div class="field">
+<label for="customer-name">Customer Name</label>
+<input id="customer-name" type="text" maxlength="80" autocomplete="name" required>
+</div>
+<div class="field">
+<label for="customer-email">Email Address</label>
+<input id="customer-email" type="email" maxlength="120" autocomplete="email" required>
+</div>
+<button class="full-btn" type="submit">Continue to Billing →</button>
 </form>
 </div>
 <aside class="summary">
@@ -242,26 +252,72 @@ footer strong{color:white}
 </section>
 </div>
 
+<div id="payment-view" class="view">
+<section>
+<button class="back-btn" onclick="showView('checkout')">← Return to customer information</button>
+<div class="page-heading"><h2>Billing &amp; Payment</h2><p>Complete the billing form to generate your demo receipt.</p></div>
+
+
 <div class="checkout-layout">
 <div class="panel">
 <h3>Card Information</h3>
+<p class="panel-desc"></p>
+
 <form id="payment-form" novalidate>
-<div class="field" id="field-card-name"><label for="card-name">Name on Card</label><input id="card-name" type="text" maxlength="80" autocomplete="cc-name" placeholder="e.g. Jane Doe" required><p class="error-msg">Enter the name on the card.</p></div>
-<div class="field" id="field-card-number"><label for="card-number">Card Number</label><input id="card-number" type="text" inputmode="numeric" maxlength="19" autocomplete="cc-number" placeholder="0000 0000 0000 0000" required><p class="error-msg">Enter a valid test card number.</p></div>
+<div class="field" id="field-card-name">
+<label for="card-name">Name on Card</label>
+<input id="card-name" type="text" maxlength="80" autocomplete="off" placeholder="Jane Doe" required>
+<p class="error-msg">Enter the name on the card.</p>
+</div>
+
+<div class="field" id="field-card-number">
+<label for="card-number">Card Number</label>
+<input id="card-number" type="text" inputmode="numeric" maxlength="23" autocomplete="off" placeholder="4242 4242 4242 4242" required>
+<p class="error-msg">Enter a valid card number.</p>
+</div>
+
 <div class="form-row">
-<div class="field" id="field-card-expiry"><label for="card-expiry">Expiry (MM/YY)</label><input id="card-expiry" type="text" inputmode="numeric" maxlength="5" autocomplete="cc-exp" placeholder="MM/YY" required><p class="error-msg">Enter a valid future expiry date.</p></div>
-<div class="field" id="field-card-cvv"><label for="card-cvv">CVV</label><input id="card-cvv" type="text" inputmode="numeric" maxlength="4" autocomplete="cc-csc" placeholder="123" required><p class="error-msg">Enter a 3 or 4 digit CVV.</p></div>
+<div class="field" id="field-card-expiry">
+<label for="card-expiry">Expiry (MM/YY)</label>
+<input id="card-expiry" type="text" inputmode="numeric" maxlength="5" autocomplete="off" placeholder="12/30" required>
+<p class="error-msg">Enter a valid future expiry date.</p>
 </div>
+<div class="field" id="field-card-cvv">
+<label for="card-cvv">CVV</label>
+<input id="card-cvv" type="text" inputmode="numeric" maxlength="4" autocomplete="off" placeholder="123" required>
+<p class="error-msg">Enter a 3 or 4 digit CVV.</p>
+</div>
+</div>
+
 <h3 style="margin-top:22px">Billing Address</h3>
-<div class="field" id="field-address-street"><label for="address-street">Street Address</label><input id="address-street" type="text" maxlength="120" autocomplete="address-line1" placeholder="123 Main St" required><p class="error-msg">Enter a street address.</p></div>
-<div class="form-row-3">
-<div class="field" id="field-address-city"><label for="address-city">City</label><input id="address-city" type="text" maxlength="60" autocomplete="address-level2" required><p class="error-msg">Required.</p></div>
-<div class="field" id="field-address-state"><label for="address-state">State</label><input id="address-state" type="text" maxlength="30" autocomplete="address-level1" required><p class="error-msg">Required.</p></div>
-<div class="field" id="field-address-zip"><label for="address-zip">ZIP Code</label><input id="address-zip" type="text" inputmode="numeric" maxlength="10" autocomplete="postal-code" required><p class="error-msg">Required.</p></div>
+<div class="field" id="field-address-street">
+<label for="address-street">Street Address</label>
+<input id="address-street" type="text" maxlength="120" autocomplete="address-line1" placeholder="123 Main St" required>
+<p class="error-msg">Enter a street address.</p>
 </div>
+
+<div class="form-row-3">
+<div class="field" id="field-address-city">
+<label for="address-city">City</label>
+<input id="address-city" type="text" maxlength="60" autocomplete="address-level2" required>
+<p class="error-msg">Enter a city.</p>
+</div>
+<div class="field" id="field-address-state">
+<label for="address-state">State</label>
+<input id="address-state" type="text" maxlength="30" autocomplete="address-level1" required>
+<p class="error-msg">Enter a state.</p>
+</div>
+<div class="field" id="field-address-zip">
+<label for="address-zip">ZIP Code</label>
+<input id="address-zip" type="text" maxlength="10" autocomplete="postal-code" required>
+<p class="error-msg">Enter a ZIP code.</p>
+</div>
+</div>
+
 <button class="full-btn" id="place-order-button" type="submit">Review &amp; Complete Order</button>
 </form>
 </div>
+
 <aside class="summary">
 <h3>Order summary</h3>
 <div id="payment-lines" class="order-lines"></div>
@@ -276,8 +332,8 @@ footer strong{color:white}
 <div id="processing-view" class="view">
 <section class="processing">
 <div class="spinner"></div>
-<h2>Processing your order...</h2>
-<p style="color:#777;margin-top:10px">Preparing your order confirmation.</p>
+<h2>Preparing your receipt...</h2>
+<p style="color:#777;margin-top:10px">Completing your order.</p>
 </section>
 </div>
 
@@ -287,23 +343,23 @@ footer strong{color:white}
 <div class="success-icon">✓</div>
 <div class="tag">Order completed</div>
 <h2>Order confirmed!</h2>
-<p style="color:#777">Your order summary is ready.</p>
+<p style="color:#777"></p>
 <div class="receipt">
 <div class="receipt-heading">
-<div><strong>orderanindian.com</strong><p style="font-size:12px;color:#888">Order Receipt</p></div>
-<div style="text-align:right"><span style="font-size:12px;color:#888">STATUS</span><br><strong style="color:var(--green)">ORDER COMPLETE</strong></div>
+<div><strong>orderanindian.com</strong><p style="font-size:12px;color:#888">Demo Order Receipt</p></div>
+<div><span style="font-size:12px;color:#888">STATUS</span><br><strong style="color:var(--green)">DEMO COMPLETE</strong></div>
 </div>
 <p style="font-size:12px;color:#888;margin-bottom:7px">ORDER NUMBER</p>
 <div id="receipt-number" class="receipt-number"></div>
 <div style="margin-top:20px">
 <div class="receipt-line"><span>Customer</span><strong id="receipt-name"></strong></div>
-<div class="receipt-line"><span>Email</span><strong id="receipt-email" style="overflow-wrap:anywhere;text-align:right"></strong></div>
+<div class="receipt-line"><span>Email</span><strong id="receipt-email"></strong></div>
 <div class="receipt-line"><span>Date</span><strong id="receipt-date"></strong></div>
-<div class="receipt-line"><span>Billing Address</span><strong id="receipt-address" style="overflow-wrap:anywhere;text-align:right"></strong></div>
+<div class="receipt-line"><span>Billing Address</span><strong id="receipt-address"></strong></div>
 </div>
 <div id="receipt-items" style="border-top:1px solid var(--border);padding-top:15px;margin-top:18px"></div>
 <div class="receipt-line receipt-total"><span>Order Total</span><strong id="receipt-total"></strong></div>
-<p class="receipt-note">This order confirmation records the selections shown above.</p>
+<p class="receipt-note">Thanks for shopping on orderanindian.com!</p>
 </div>
 <div class="actions" style="justify-content:center">
 <button class="btn secondary" onclick="printReceipt()">Print receipt</button>
@@ -315,316 +371,373 @@ footer strong{color:white}
 </main>
 
 <footer>
-<div><strong>orderanindian.com</strong><br>Professional Services & Connections</div>
+<div><strong>orderanindian.com</strong><br>Professional Services &amp; Connections</div>
 <div>© 2026 orderanindian.com.<br>All rights reserved.</div>
 </footer>
+
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
-const services={
-culinary:{name:"Culinary Consulting",price:19.99},
-it:{name:"IT Support",price:49.99},
-business:{name:"Business Consulting",price:99.99},
-design:{name:"Graphic Design",price:34.99},
-legal:{name:"Legal Consultation",price:299.99},
-personal:{name:"Personal Assistance",price:9.99}
+"use strict";
+
+const services = {
+  culinary: {name:"Culinary Consulting",price:19.99},
+  it: {name:"IT Support",price:49.99},
+  business: {name:"Business Consulting",price:99.99},
+  design: {name:"Graphic Design",price:34.99},
+  legal: {name:"Legal Consultation",price:299.99},
+  personal: {name:"Personal Assistance",price:9.99}
 };
 
-let cart={};
-let toastTimer;
-let lastReceipt=null;
-let customerInfo=null;
+let cart = {};
+let toastTimer = null;
+let lastReceipt = null;
+let customerInfo = null;
 
-const money=value=>"$"+value.toFixed(2);
-const cartCount=document.getElementById("cart-count");
-const toast=document.getElementById("toast");
+const money = value => "$" + value.toFixed(2);
+const cartCount = document.getElementById("cart-count");
+const toast = document.getElementById("toast");
 
-function showToast(message){
-toast.textContent=message;
-toast.classList.add("show");
-clearTimeout(toastTimer);
-toastTimer=setTimeout(()=>toast.classList.remove("show"),2500);
+function showToast(message) {
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove("show"), 2500);
 }
 
-function showView(name){
-document.querySelectorAll(".view").forEach(view=>view.classList.remove("active"));
-const view=document.getElementById(name+"-view");
-if(view)view.classList.add("active");
-if(name==="cart")renderCart();
-if(name==="checkout")renderCheckout();
-if(name==="payment")renderPayment();
-window.scrollTo({top:0,behavior:"auto"});
+function showView(name) {
+  const view = document.getElementById(name + "-view");
+  if (!view) return;
+
+  if (["checkout", "payment"].includes(name) && !itemCount()) {
+    name = "cart";
+  }
+
+  if (name === "payment" && !customerInfo) {
+    name = "checkout";
+  }
+
+  document.querySelectorAll(".view").forEach(el => el.classList.remove("active"));
+  document.getElementById(name + "-view").classList.add("active");
+
+  if (name === "cart") renderCart();
+  if (name === "checkout") renderCheckout();
+  if (name === "payment") renderPayment();
+
+  window.scrollTo({top:0,behavior:"auto"});
 }
 
-function itemCount(){
-return Object.values(cart).reduce((sum,qty)=>sum+qty,0);
+function itemCount() {
+  return Object.values(cart).reduce((sum, qty) => sum + qty, 0);
 }
 
-function subtotal(){
-return Object.entries(cart).reduce((sum,[id,qty])=>sum+(services[id]?services[id].price*qty:0),0);
+function subtotal() {
+  return Object.entries(cart).reduce((sum, [id, qty]) => {
+    return sum + (services[id] ? services[id].price * qty : 0);
+  }, 0);
 }
 
-function updateCartCount(){
-cartCount.textContent=itemCount();
+function updateCartCount() {
+  cartCount.textContent = itemCount();
 }
 
-function addToCart(id){
-if(!services[id])return;
-cart[id]=(cart[id]||0)+1;
-updateCartCount();
-showToast(services[id].name+" added to cart.");
+function addToCart(id) {
+  if (!services[id]) return;
+  cart[id] = (cart[id] || 0) + 1;
+  updateCartCount();
+  showToast(services[id].name + " added to cart.");
 }
 
-function changeQuantity(id,delta){
-if(!services[id])return;
-cart[id]=(cart[id]||0)+delta;
-if(cart[id]<=0)delete cart[id];
-updateCartCount();
-renderCart();
+function changeQuantity(id, delta) {
+  if (!services[id]) return;
+  cart[id] = (cart[id] || 0) + delta;
+  if (cart[id] <= 0) delete cart[id];
+  updateCartCount();
+  renderCart();
 }
 
-function removeItem(id){
-delete cart[id];
-updateCartCount();
-renderCart();
-showToast("Item removed from cart.");
+function removeItem(id) {
+  delete cart[id];
+  updateCartCount();
+  renderCart();
+  showToast("Item removed from cart.");
 }
 
-function renderCart(){
-const container=document.getElementById("cart-content");
-const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
+function renderCart() {
+  const container = document.getElementById("cart-content");
+  const entries = Object.entries(cart).filter(([id, qty]) => services[id] && qty > 0);
 
-if(!entries.length){
-container.innerHTML=`
-<div class="empty">
-<div class="emoji">🛒</div>
-<h3>Your cart is empty.</h3>
-<p>Explore the catalog to add services to your cart.</p>
-<button class="btn primary" onclick="showView('home')">Browse services</button>
-</div>`;
-return;
+  if (!entries.length) {
+    container.innerHTML = `
+      <div class="empty">
+        <div class="emoji">🛒</div>
+        <h3>Your cart is empty.</h3>
+        <p>Explore the catalog to add services to your cart.</p>
+        <button class="btn primary" onclick="showView('home')">Browse services</button>
+      </div>`;
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="cart-layout">
+      <div class="cart-items">
+        ${entries.map(([id, qty]) => `
+          <article class="cart-item">
+            <div>
+              <h3>${services[id].name}</h3>
+              <p>${money(services[id].price)} per item</p>
+            </div>
+            <div class="cart-item-right">
+              <strong>${money(services[id].price * qty)}</strong>
+              <div class="quantity">
+                <button aria-label="Decrease quantity" onclick="changeQuantity('${id}',-1)">−</button>
+                <span>${qty}</span>
+                <button aria-label="Increase quantity" onclick="changeQuantity('${id}',1)">+</button>
+              </div>
+              <button class="remove" onclick="removeItem('${id}')">Remove</button>
+            </div>
+          </article>`).join("")}
+      </div>
+      <aside class="summary">
+        <h3>Order summary</h3>
+        <div class="summary-line"><span>Items</span><strong>${itemCount()}</strong></div>
+        <div class="summary-line"><span>Subtotal</span><strong>${money(subtotal())}</strong></div>
+        <div class="summary-line"><span>Fees</span><strong>$0.00</strong></div>
+        <div class="summary-line summary-total"><span>Total</span><strong>${money(subtotal())}</strong></div>
+        <button class="full-btn" onclick="showView('checkout')">Proceed to checkout →</button>
+        <button class="full-btn" style="background:#eee;color:#222;margin-top:9px" onclick="showView('home')">Continue browsing</button>
+      </aside>
+    </div>`;
 }
 
-container.innerHTML=`
-<div class="cart-layout">
-<div class="cart-items">
-${entries.map(([id,qty])=>`
-<article class="cart-item">
-<div><h3>${services[id].name}</h3><p>${money(services[id].price)} per item</p></div>
-<div class="cart-item-right">
-<strong>${money(services[id].price*qty)}</strong>
-<div class="quantity">
-<button aria-label="Decrease quantity" onclick="changeQuantity('${id}',-1)">−</button>
-<span>${qty}</span>
-<button aria-label="Increase quantity" onclick="changeQuantity('${id}',1)">+</button>
-</div>
-<button class="remove" onclick="removeItem('${id}')">Remove</button>
-</div>
-</article>`).join("")}
-</div>
-<aside class="summary">
-<h3>Order summary</h3>
-<div class="summary-line"><span>Items</span><strong>${itemCount()}</strong></div>
-<div class="summary-line"><span>Subtotal</span><strong>${money(subtotal())}</strong></div>
-<div class="summary-line"><span>Fees</span><strong>$0.00</strong></div>
-<div class="summary-line summary-total"><span>Total</span><strong>${money(subtotal())}</strong></div>
-<button class="full-btn" onclick="showView('checkout')">Proceed to checkout →</button>
-<button class="full-btn" style="background:#eee;color:#222;margin-top:9px" onclick="showView('home')">Continue browsing</button>
-</aside>
-</div>`;
+function renderOrderLines(targetId) {
+  const entries = Object.entries(cart).filter(([id, qty]) => services[id] && qty > 0);
+  document.getElementById(targetId).innerHTML = entries.map(([id, qty]) => `
+    <div class="order-line">
+      <span>${services[id].name} × ${qty}</span>
+      <strong>${money(services[id].price * qty)}</strong>
+    </div>`).join("");
 }
 
-function renderCheckout(){
-if(!itemCount()){
-showView("cart");
-return;
-}
-const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
-document.getElementById("checkout-lines").innerHTML=entries.map(([id,qty])=>`
-<div class="order-line"><span>${services[id].name} × ${qty}</span><strong>${money(services[id].price*qty)}</strong></div>`).join("");
-document.getElementById("checkout-subtotal").textContent=money(subtotal());
-document.getElementById("checkout-total").textContent=money(subtotal());
+function renderCheckout() {
+  if (!itemCount()) {
+    showView("cart");
+    return;
+  }
+
+  renderOrderLines("checkout-lines");
+  document.getElementById("checkout-subtotal").textContent = money(subtotal());
+  document.getElementById("checkout-total").textContent = money(subtotal());
 }
 
-function renderPayment(){
-if(!itemCount()){
-showView("cart");
-return;
-}
-const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
-document.getElementById("payment-lines").innerHTML=entries.map(([id,qty])=>`
-<div class="order-line"><span>${services[id].name} × ${qty}</span><strong>${money(services[id].price*qty)}</strong></div>`).join("");
-document.getElementById("payment-subtotal").textContent=money(subtotal());
-document.getElementById("payment-total").textContent=money(subtotal());
-}
+function renderPayment() {
+  if (!itemCount()) {
+    showView("cart");
+    return;
+  }
 
-document.getElementById("checkout-form").addEventListener("submit",function(event){
-event.preventDefault();
-if(!itemCount()){
-showView("cart");
-return;
+  renderOrderLines("payment-lines");
+  document.getElementById("payment-subtotal").textContent = money(subtotal());
+  document.getElementById("payment-total").textContent = money(subtotal());
 }
 
-const name=document.getElementById("customer-name").value.trim();
-const email=document.getElementById("customer-email").value.trim();
+document.getElementById("checkout-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-if(!name||!email||!this.checkValidity()){
-this.reportValidity();
-return;
-}
+  if (!itemCount()) {
+    showView("cart");
+    return;
+  }
 
-customerInfo={name,email};
-showView("payment");
+  if (!this.reportValidity()) return;
+
+  const name = document.getElementById("customer-name").value.trim();
+  const email = document.getElementById("customer-email").value.trim();
+
+  if (!name || !email) {
+    this.reportValidity();
+    return;
+  }
+
+  customerInfo = {name, email};
+  showView("payment");
 });
 
-function setFieldError(fieldId,isInvalid){
-const field=document.getElementById(fieldId);
-if(field)field.classList.toggle("invalid",isInvalid);
+function setFieldError(fieldId, isInvalid) {
+  const field = document.getElementById(fieldId);
+  if (field) field.classList.toggle("invalid", isInvalid);
 }
 
-function luhnCheck(digits){
-let sum=0,alt=false;
-for(let i=digits.length-1;i>=0;i--){
-let n=parseInt(digits[i],10);
-if(alt){n*=2;if(n>9)n-=9;}
-sum+=n;
-alt=!alt;
-}
-return sum%10===0;
+function luhnCheck(digits) {
+  let sum = 0;
+  let alt = false;
+
+  for (let i = digits.length - 1; i >= 0; i--) {
+    let n = Number(digits[i]);
+    if (alt) {
+      n *= 2;
+      if (n > 9) n -= 9;
+    }
+    sum += n;
+    alt = !alt;
+  }
+
+  return sum % 10 === 0;
 }
 
-document.getElementById("card-number").addEventListener("input",function(){
-const digits=this.value.replace(/\D/g,"").slice(0,19);
-this.value=digits.replace(/(.{4})/g,"$1 ").trim();
+document.getElementById("card-number").addEventListener("input", function() {
+  const digits = this.value.replace(/\D/g, "").slice(0, 19);
+  this.value = digits.replace(/(.{4})/g, "$1 ").trim();
 });
 
-document.getElementById("card-expiry").addEventListener("input",function(){
-let digits=this.value.replace(/\D/g,"").slice(0,4);
-if(digits.length>=3)digits=digits.slice(0,2)+"/"+digits.slice(2);
-this.value=digits;
+document.getElementById("card-expiry").addEventListener("input", function() {
+  let digits = this.value.replace(/\D/g, "").slice(0, 4);
+  if (digits.length > 2) digits = digits.slice(0, 2) + "/" + digits.slice(2);
+  this.value = digits;
 });
 
-document.getElementById("card-cvv").addEventListener("input",function(){
-this.value=this.value.replace(/\D/g,"").slice(0,4);
+document.getElementById("card-cvv").addEventListener("input", function() {
+  this.value = this.value.replace(/\D/g, "").slice(0, 4);
 });
 
-document.getElementById("payment-form").addEventListener("submit",function(event){
-event.preventDefault();
-if(!itemCount()||!customerInfo){
-showView("cart");
-return;
-}
+document.getElementById("payment-form").addEventListener("submit", function(event) {
+  event.preventDefault();
 
-const cardName=document.getElementById("card-name").value.trim();
-const cardNumberRaw=document.getElementById("card-number").value.replace(/\s/g,"");
-const expiry=document.getElementById("card-expiry").value.trim();
-const cvv=document.getElementById("card-cvv").value.trim();
-const street=document.getElementById("address-street").value.trim();
-const city=document.getElementById("address-city").value.trim();
-const state=document.getElementById("address-state").value.trim();
-const zip=document.getElementById("address-zip").value.trim();
+  if (!itemCount()) {
+    showView("cart");
+    return;
+  }
 
-let valid=true;
+  if (!customerInfo) {
+    showView("checkout");
+    return;
+  }
 
-setFieldError("field-card-name",!cardName);
-if(!cardName)valid=false;
+  const cardName = document.getElementById("card-name").value.trim();
+  const cardNumber = document.getElementById("card-number").value.replace(/\D/g, "");
+  const expiry = document.getElementById("card-expiry").value.trim();
+  const cvv = document.getElementById("card-cvv").value.trim();
+  const street = document.getElementById("address-street").value.trim();
+  const city = document.getElementById("address-city").value.trim();
+  const state = document.getElementById("address-state").value.trim();
+  const zip = document.getElementById("address-zip").value.trim();
 
-const cardNumberValid=/^\d{13,19}$/.test(cardNumberRaw)&&luhnCheck(cardNumberRaw);
-setFieldError("field-card-number",!cardNumberValid);
-if(!cardNumberValid)valid=false;
+  let valid = true;
 
-let expiryValid=false;
-const expiryMatch=/^(\d{2})\/(\d{2})$/.exec(expiry);
-if(expiryMatch){
-const month=parseInt(expiryMatch[1],10);
-const year=2000+parseInt(expiryMatch[2],10);
-if(month>=1&&month<=12){
-const expiryDate=new Date(year,month,0,23,59,59);
-if(expiryDate>=new Date())expiryValid=true;
-}
-}
-setFieldError("field-card-expiry",!expiryValid);
-if(!expiryValid)valid=false;
+  const checks = [
+    ["field-card-name", Boolean(cardName)],
+    ["field-card-number", /^\d{13,19}$/.test(cardNumber) && luhnCheck(cardNumber)],
+    ["field-card-expiry", false],
+    ["field-card-cvv", /^\d{3,4}$/.test(cvv)],
+    ["field-address-street", Boolean(street)],
+    ["field-address-city", Boolean(city)],
+    ["field-address-state", Boolean(state)],
+    ["field-address-zip", Boolean(zip)]
+  ];
 
-const cvvValid=/^\d{3,4}$/.test(cvv);
-setFieldError("field-card-cvv",!cvvValid);
-if(!cvvValid)valid=false;
+  const match = /^(\d{2})\/(\d{2})$/.exec(expiry);
+  let expiryValid = false;
 
-setFieldError("field-address-street",!street);
-if(!street)valid=false;
-setFieldError("field-address-city",!city);
-if(!city)valid=false;
-setFieldError("field-address-state",!state);
-if(!state)valid=false;
-setFieldError("field-address-zip",!zip);
-if(!zip)valid=false;
+  if (match) {
+    const month = Number(match[1]);
+    const year = 2000 + Number(match[2]);
 
-if(!valid){
-const firstInvalid=this.querySelector(".field.invalid input");
-if(firstInvalid)firstInvalid.focus();
-return;
-}
+    if (month >= 1 && month <= 12) {
+      const expiryEnd = new Date(year, month, 0, 23, 59, 59, 999);
+      expiryValid = expiryEnd >= new Date();
+    }
+  }
 
-const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
-lastReceipt={
-number:"ORD-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,7).toUpperCase(),
-name:customerInfo.name,
-email:customerInfo.email,
-address:`${street}, ${city}, ${state} ${zip}`,
-cardLast4:cardNumberRaw.slice(-4),
-date:new Date().toLocaleString(),
-items:entries.map(([id,qty])=>({name:services[id].name,quantity:qty,total:services[id].price*qty})),
-total:subtotal()
-};
+  checks[2][1] = expiryValid;
 
-document.getElementById("place-order-button").disabled=true;
-showView("processing");
+  for (const [fieldId, fieldValid] of checks) {
+    setFieldError(fieldId, !fieldValid);
+    if (!fieldValid) valid = false;
+  }
 
-setTimeout(()=>{
-renderReceipt(lastReceipt);
-document.getElementById("checkout-form").reset();
-this.reset();
-document.querySelectorAll(".field.invalid").forEach(field=>field.classList.remove("invalid"));
-document.getElementById("place-order-button").disabled=false;
-customerInfo=null;
-showView("confirmation");
-},900);
+  if (!valid) {
+    const firstInvalid = this.querySelector(".field.invalid input");
+    if (firstInvalid) firstInvalid.focus();
+    return;
+  }
+
+  // This is a demo only. No payment data is transmitted or charged.
+  const entries = Object.entries(cart).filter(([id, qty]) => services[id] && qty > 0);
+
+  lastReceipt = {
+    number: "DEMO-" + Date.now().toString(36).toUpperCase(),
+    name: customerInfo.name,
+    email: customerInfo.email,
+    address: `${street}, ${city}, ${state} ${zip}`,
+    date: new Date().toLocaleString(),
+    items: entries.map(([id, qty]) => ({
+      name: services[id].name,
+      quantity: qty,
+      total: services[id].price * qty
+    })),
+    total: subtotal()
+  };
+
+  const button = document.getElementById("place-order-button");
+  button.disabled = true;
+  showView("processing");
+
+  setTimeout(() => {
+    renderReceipt(lastReceipt);
+    this.reset();
+    document.querySelectorAll(".field.invalid").forEach(field => field.classList.remove("invalid"));
+    button.disabled = false;
+    customerInfo = null;
+    showView("confirmation");
+  }, 900);
 });
 
-function renderReceipt(receipt){
-document.getElementById("receipt-number").textContent=receipt.number;
-document.getElementById("receipt-name").textContent=receipt.name;
-document.getElementById("receipt-email").textContent=receipt.email;
-document.getElementById("receipt-date").textContent=receipt.date;
-document.getElementById("receipt-address").textContent=receipt.address||"—";
-document.getElementById("receipt-total").textContent=money(receipt.total);
-document.getElementById("receipt-items").innerHTML=receipt.items.map(item=>`
-<div class="receipt-line"><span>${item.name} × ${item.quantity}</span><strong>${money(item.total)}</strong></div>`).join("");
+function renderReceipt(receipt) {
+  document.getElementById("receipt-number").textContent = receipt.number;
+  document.getElementById("receipt-name").textContent = receipt.name;
+  document.getElementById("receipt-email").textContent = receipt.email;
+  document.getElementById("receipt-date").textContent = receipt.date;
+  document.getElementById("receipt-address").textContent = receipt.address || "—";
+  document.getElementById("receipt-total").textContent = money(receipt.total);
+
+  document.getElementById("receipt-items").innerHTML = receipt.items.map(item => `
+    <div class="receipt-line">
+      <span>${item.name} × ${item.quantity}</span>
+      <strong>${money(item.total)}</strong>
+    </div>`).join("");
 }
 
-function printReceipt(){
-if(lastReceipt)window.print();
+function printReceipt() {
+  if (lastReceipt) window.print();
 }
 
-function finishOrder(){
-cart={};
-lastReceipt=null;
-updateCartCount();
-showView("home");
-showToast("Welcome back!");
+function finishOrder() {
+  cart = {};
+  lastReceipt = null;
+  customerInfo = null;
+  document.getElementById("checkout-form").reset();
+  document.getElementById("payment-form").reset();
+  document.querySelectorAll(".field.invalid").forEach(field => field.classList.remove("invalid"));
+  updateCartCount();
+  showView("home");
+  showToast("Welcome back!");
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-if(link.classList.contains("cart-nav")||link.classList.contains("logo"))return;
-link.addEventListener("click",function(event){
-const targetId=this.getAttribute("href");
-if(!targetId||targetId==="#")return;
-const target=document.querySelector(targetId);
-if(target&&document.getElementById("home-view").classList.contains("active")){
-event.preventDefault();
-target.scrollIntoView({behavior:"smooth"});
-}
-});
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  if (link.classList.contains("cart-nav") || link.classList.contains("logo")) return;
+
+  link.addEventListener("click", function(event) {
+    const targetId = this.getAttribute("href");
+    if (!targetId || targetId === "#") return;
+
+    if (document.getElementById("home-view").classList.contains("active")) {
+      const target = document.querySelector(targetId);
+      if (target) {
+        event.preventDefault();
+        target.scrollIntoView({behavior:"smooth"});
+      }
+    }
+  });
 });
 
 updateCartCount();
