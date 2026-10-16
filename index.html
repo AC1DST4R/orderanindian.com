@@ -3,26 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f8f7f4">
-<title>OrderAMexican.com | Professional Services</title>
+<meta name="theme-color" content="#ff9933">
+<title>orderanindian.com | Professional Services</title>
 <style>
-:root{--bg:#f8f7f4;--dark:#171717;--red:#c62828;--green:#16794b;--muted:#777;--border:#e8e5df}
+:root{--bg:#fffaf0;--dark:#26352c;--red:#e87519;--green:#16804a;--gold:#f4c34e;--cream:#fff4df;--muted:#746b5d;--border:#eadcc5}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at 10% 15%,#ff993322 0 2px,transparent 3px),radial-gradient(circle at 90% 45%,#13804a12 0 2px,transparent 3px),var(--bg);background-size:34px 34px,42px 42px,auto;color:var(--dark);line-height:1.6}
 button,input{font:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
 button{cursor:pointer}
 a{color:inherit}
-nav{display:flex;align-items:center;justify-content:space-between;padding:20px 8%;background:white;border-bottom:1px solid var(--border);gap:20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 8%;background:linear-gradient(90deg,#fff 0%,#fff8eb 50%,#fff 100%);border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#ff9933 0 33%,white 33% 66%,#13804a 66%) 1;gap:20px}
 .logo{font-size:23px;font-weight:900;letter-spacing:-1px;text-decoration:none;white-space:nowrap}
 .logo span{color:var(--red)}
+.logo{ text-shadow:1px 1px 0 #f2b63230 }
 .nav-links{display:flex;align-items:center;gap:23px}
 .nav-links a{text-decoration:none;color:#444;font-size:14px;font-weight:600}
 .nav-links a:hover{color:var(--red)}
-.cart-nav{background:var(--dark);color:white!important;padding:11px 17px;border-radius:8px}
-.hero{padding:85px 8%;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;background:white}
-.tag{display:inline-block;background:#fcebea;color:var(--red);font-size:12px;font-weight:800;padding:8px 13px;border-radius:30px;margin-bottom:22px;text-transform:uppercase;letter-spacing:1px}
+.cart-nav{background:var(--green);color:white!important;padding:11px 17px;border-radius:8px;box-shadow:0 4px 0 #0c5030}
+.hero{padding:85px 8%;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;background:linear-gradient(135deg,#fff 0%,#fff8e9 58%,#ffe8c5 100%);position:relative;overflow:hidden}
+.tag{display:inline-block;background:#fff0d9;color:#a94d0b;font-size:12px;font-weight:900;padding:8px 13px;border-radius:30px;margin-bottom:22px;text-transform:uppercase;letter-spacing:1px;border:1px solid #e8c46e}
 h1{font-size:clamp(42px,6vw,74px);letter-spacing:-3px;line-height:1.04;margin-bottom:24px}
 h1 span{color:var(--red)}
 .hero p{color:#666;font-size:17px;line-height:1.8;max-width:510px}
@@ -32,39 +33,42 @@ h1 span{color:var(--red)}
 .primary{background:var(--red);color:white}
 .primary:hover{background:#a91f1f}
 .secondary{background:#f0efec;color:#222}
-.hero-art{background:#f5e7d0;border-radius:24px;padding:35px;text-align:center;min-height:320px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 25px 60px #4b30201a}
+.hero-art{background:linear-gradient(145deg,#16804a,#075c35);color:#fff;border:5px solid #ff9933;border-radius:24px;padding:35px;text-align:center;min-height:320px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 25px 60px #4b30201a;position:relative;overflow:hidden}.hero-art:before,.hero-art:after{content:"✦  ❋  ✧  ❋  ✦";position:absolute;left:0;right:0;color:#ffcf70;letter-spacing:12px;font-size:18px;opacity:.8}.hero-art:before{top:12px}.hero-art:after{bottom:12px}.hero-art h3{color:#ffe2a6}
 .hero-art .emoji{font-size:95px}
 .hero-art h3{margin-top:15px;font-size:23px}
 .hero-art p{margin:8px auto 0;font-size:13px}
-.trust{padding:23px 8%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--border);color:#777;font-size:11px;font-weight:800}
+.trust{padding:23px 8%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--border);color:var(--green);background:#fffdf6;font-size:11px;font-weight:900}
 section{padding:70px 8%}
+#catalog{background:linear-gradient(180deg,#fff8e8,#fffdf7)}
+.section-head small{display:inline-block;padding:5px 10px;border-radius:5px;background:#e2f2e7;color:var(--green)}
+h2{color:var(--dark)}
 .section-head{margin-bottom:30px}
 .section-head small{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.5px}
 h2{font-size:clamp(29px,4vw,38px);letter-spacing:-1.3px;line-height:1.2;margin:10px 0}
 .section-head p{color:var(--muted);line-height:1.7}
 .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.card{background:white;border:1px solid var(--border);border-radius:16px;padding:23px;transition:.2s;min-width:0}
+.card{background:#fffefa;border:1px solid #e8d6b0;border-top:4px solid var(--red);border-radius:16px;padding:23px;transition:.2s;min-width:0;box-shadow:0 8px 22px #68461a0b}
 .card:hover{transform:translateY(-3px);box-shadow:0 15px 35px #0000000b}
-.card-emoji{height:130px;display:grid;place-items:center;font-size:62px;background:#f7f3ed;border-radius:12px;margin-bottom:20px}
+.card-emoji{height:130px;display:grid;place-items:center;font-size:62px;background:repeating-linear-gradient(135deg,#fff0dc,#fff0dc 12px,#fffaf0 12px,#fffaf0 24px);border-radius:12px;margin-bottom:20px;border:1px solid #f0d9a8}
 .card h3{font-size:18px;margin-bottom:8px}
 .card p{color:#777;font-size:13px;line-height:1.7;min-height:66px}
 .card-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px}
 .price{font-size:21px;font-weight:900;white-space:nowrap}
-.add{background:var(--dark);color:white;border:0;padding:11px 13px;border-radius:8px;font-size:13px;font-weight:800}
+.add{background:var(--green);color:white;border:0;padding:11px 13px;border-radius:8px;font-size:13px;font-weight:800;box-shadow:0 3px 0 #0c5030}
 .add:hover{background:var(--red)}
 .profile-card{overflow:hidden;background:white;border:1px solid var(--border);border-radius:16px;max-width:420px}
 .profile-card img{display:block;width:100%;height:330px;object-fit:cover;object-position:center}
 .profile-info{padding:22px}
 .profile-info h3{font-size:21px}
 .profile-info p{font-size:13px;color:var(--muted);margin-top:5px}
-.how{background:#171717;color:white}
+.how{background:linear-gradient(135deg,#174a30,#103521);color:white;border-top:6px solid var(--gold);border-bottom:6px solid var(--red)}
 .how .section-head p{color:#aaa}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.step-number{font-size:12px;color:#ff766b;font-weight:900}
+.step-number{font-size:12px;color:#ffca72;font-weight:900}
 .steps h3{margin:13px 0 8px;font-size:19px}
 .steps p{color:#aaa;line-height:1.8;font-size:14px}
-.info-panel{background:white;border:1px solid var(--border);padding:24px;border-radius:14px;color:#666;font-size:14px;line-height:1.8}
-footer{background:#111;color:#999;padding:32px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+.info-panel{background:#fffefa;border:1px solid #e8d6b0;border-left:6px solid var(--green);padding:24px;border-radius:14px;color:#665c4e;font-size:14px;line-height:1.8}
+footer{background:linear-gradient(90deg,#e87519,#fff8eb 50%,#16804a);color:#26352c;padding:32px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;border-top:5px solid var(--gold)}
 footer strong{color:white}
 .view{display:none;min-height:70vh}
 .view.active{display:block}
@@ -132,7 +136,7 @@ footer strong{color:white}
 <body>
 
 <nav>
-<a href="#" class="logo" onclick="showView('home');return false">Order<span>A</span>Mexican<span>.</span></a>
+<a href="#" class="logo" onclick="showView('home');return false">Order<span>A</span>nIndian<span>.</span></a>
 <div class="nav-links">
 <a href="#catalog" onclick="showView('home')">Services</a>
 <a href="#process" onclick="showView('home')">Our Process</a>
@@ -153,9 +157,9 @@ footer strong{color:white}
 </div>
 </div>
 <div class="hero-art">
-<div class="emoji">🤝</div>
-<h3>People. Expertise. Opportunity.</h3>
-<p>Connecting skills with needs through a streamlined experience.</p>
+<div class="emoji">🍛 🪷 🇮🇳</div>
+<h3>Namaste!</h3>
+<p>A little spice, a lot of Indian hospitality.</p>
 </div>
 </header>
 
@@ -173,7 +177,7 @@ footer strong{color:white}
 <p>Browse categories and add your selections to the cart.</p>
 </div>
 <div class="products">
-<article class="card"><div class="card-emoji">🌮</div><h3>Culinary Consulting</h3><p>Culinary guidance, menu planning, food preparation strategies, and recommendations for your next project.</p><div class="card-bottom"><span class="price">$19.99</span><button class="add" onclick="addToCart('culinary')">Add to Cart +</button></div></article>
+<article class="card"><div class="card-emoji">🍛</div><h3>Culinary Consulting</h3><p>Culinary guidance, menu planning, food preparation strategies, and recommendations for your next project.</p><div class="card-bottom"><span class="price">$19.99</span><button class="add" onclick="addToCart('culinary')">Add to Cart +</button></div></article>
 <article class="card"><div class="card-emoji">💻</div><h3>IT Support</h3><p>Technical troubleshooting, software guidance, system optimization, and assistance with common technology challenges.</p><div class="card-bottom"><span class="price">$49.99</span><button class="add" onclick="addToCart('it')">Add to Cart +</button></div></article>
 <article class="card"><div class="card-emoji">📊</div><h3>Business Consulting</h3><p>Strategic planning, workflow improvement, operational guidance, and business development support.</p><div class="card-bottom"><span class="price">$99.99</span><button class="add" onclick="addToCart('business')">Add to Cart +</button></div></article>
 <article class="card"><div class="card-emoji">🎨</div><h3>Graphic Design</h3><p>Creative direction, visual identity development, branding concepts, and digital design support.</p><div class="card-bottom"><span class="price">$34.99</span><button class="add" onclick="addToCart('design')">Add to Cart +</button></div></article>
@@ -183,10 +187,10 @@ footer strong{color:white}
 </section>
 
 <section id="leadership">
-<div class="section-head"><small>Leadership</small><h2>Meet Angelina.</h2><p>Leadership and organizational profile.</p></div>
+<div class="section-head"><small>Leadership</small><h2>Meet Amir Dolla - Ubereats King.</h2><p>Leadership and organizational profile.</p></div>
 <article class="profile-card">
-<img src="https://raw.githubusercontent.com/AC1DST4R/orderamexican/refs/heads/main/Angie.png" alt="Angelina Verdugo" loading="lazy">
-<div class="profile-info"><h3>Angelina Verdugo - Head Mexican</h3><p>Leadership profile</p></div>
+<img src="https://raw.githubusercontent.com/AC1DST4R/orderanindian.com/refs/heads/main/Formal_Portrait_in_a_Suit%20-%20Removed.png" alt="Amir Dolla - Ubereats King" loading="lazy">
+<div class="profile-info"><h3>Amir Dolla - Ubereats King</h3><p>Leadership profile</p></div>
 </article>
 </section>
 
@@ -296,7 +300,7 @@ footer strong{color:white}
 <p style="color:#777">Your order summary is ready.</p>
 <div class="receipt">
 <div class="receipt-heading">
-<div><strong>OrderAMexican.com</strong><p style="font-size:12px;color:#888">Order Receipt</p></div>
+<div><strong>orderanindian.com</strong><p style="font-size:12px;color:#888">Order Receipt</p></div>
 <div style="text-align:right"><span style="font-size:12px;color:#888">STATUS</span><br><strong style="color:var(--green)">ORDER COMPLETE</strong></div>
 </div>
 <p style="font-size:12px;color:#888;margin-bottom:7px">ORDER NUMBER</p>
@@ -321,8 +325,8 @@ footer strong{color:white}
 </main>
 
 <footer>
-<div><strong>OrderAMexican.com</strong><br>Professional Services & Connections</div>
-<div>© 2026 OrderAMexican.com.<br>All rights reserved.</div>
+<div><strong>orderanindian.com</strong><br>Professional Services & Connections</div>
+<div>© 2026 orderanindian.com.<br>All rights reserved.</div>
 </footer>
 <div id="toast" role="status" aria-live="polite"></div>
 
