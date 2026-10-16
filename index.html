@@ -1,679 +1,479 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#f8f7f4">
 <title>OrderAMexican.com | Professional Services</title>
-<meta name="description" content="Discover professional services, connect with specialists, and find the right expertise for your needs.">
-
 <style>
-:root {
-    --bg: #f8f7f4;
-    --dark: #171717;
-    --red: #c62828;
-    --green: #16794b;
-    --muted: #777;
-    --white: #fff;
-    --border: #e8e5df;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: var(--bg);
-    color: var(--dark);
-    line-height: 1.6;
-}
-
-a {
-    color: inherit;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 22px 8%;
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-}
-
-.logo {
-    font-size: 23px;
-    font-weight: 900;
-    letter-spacing: -1px;
-    text-decoration: none;
-}
-
-.logo span {
-    color: var(--red);
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #444;
-    font-size: 14px;
-    font-weight: 600;
-    transition: color .2s;
-}
-
-.nav-links a:hover {
-    color: var(--red);
-}
-
-.cart {
-    background: var(--dark);
-    color: white !important;
-    padding: 11px 17px;
-    border-radius: 8px;
-}
-
-.hero {
-    padding: 95px 8% 80px;
-    display: grid;
-    grid-template-columns: 1.15fr .85fr;
-    align-items: center;
-    gap: 60px;
-    background: white;
-}
-
-.tag {
-    display: inline-block;
-    background: #fcebea;
-    color: var(--red);
-    font-size: 12px;
-    font-weight: 800;
-    padding: 9px 13px;
-    border-radius: 30px;
-    margin-bottom: 23px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-h1 {
-    font-size: clamp(44px, 6vw, 76px);
-    letter-spacing: -4px;
-    line-height: 1.02;
-    margin-bottom: 24px;
-}
-
-h1 span {
-    color: var(--red);
-}
-
-.hero p {
-    color: #666;
-    font-size: 17px;
-    line-height: 1.8;
-    max-width: 500px;
-}
-
-.actions {
-    display: flex;
-    gap: 13px;
-    margin-top: 32px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    padding: 15px 22px;
-    border: none;
-    border-radius: 9px;
-    cursor: pointer;
-    font-weight: 800;
-    font-size: 14px;
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.primary {
-    background: var(--red);
-    color: white;
-}
-
-.primary:hover {
-    background: #a91f1f;
-}
-
-.secondary {
-    background: #f0efec;
-    color: #222;
-}
-
-.hero-art {
-    background: #f5e7d0;
-    border-radius: 24px;
-    padding: 35px;
-    text-align: center;
-    min-height: 330px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 25px 60px #4b30201a;
-}
-
-.hero-art .emoji {
-    font-size: 105px;
-}
-
-.hero-art h3 {
-    margin-top: 15px;
-    font-size: 23px;
-}
-
-.hero-art p {
-    margin: 8px auto 0;
-    font-size: 13px;
-}
-
-.trust {
-    padding: 24px 8%;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    border-bottom: 1px solid var(--border);
-    color: #777;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-section {
-    padding: 75px 8%;
-}
-
-.section-head {
-    margin-bottom: 32px;
-}
-
-.section-head small {
-    color: var(--green);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-h2 {
-    font-size: 38px;
-    letter-spacing: -1.5px;
-    line-height: 1.2;
-    margin: 10px 0;
-}
-
-.section-head p {
-    color: var(--muted);
-    line-height: 1.6;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.card {
-    background: white;
-    border: 1px solid #e9e6e0;
-    border-radius: 16px;
-    padding: 25px;
-    transition: .2s;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px #0000000b;
-}
-
-.card-emoji {
-    height: 135px;
-    display: grid;
-    place-items: center;
-    font-size: 65px;
-    background: #f7f3ed;
-    border-radius: 12px;
-    margin-bottom: 22px;
-}
-
-.card h3 {
-    font-size: 19px;
-    margin-bottom: 9px;
-}
-
-.card p {
-    color: #777;
-    font-size: 13px;
-    line-height: 1.7;
-    min-height: 66px;
-}
-
-.card-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.price {
-    font-size: 22px;
-    font-weight: 900;
-    white-space: nowrap;
-}
-
-.add {
-    background: var(--dark);
-    color: white;
-    border: 0;
-    padding: 11px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 800;
-    transition: background .2s;
-}
-
-.add:hover {
-    background: var(--red);
-}
-
-.how {
-    background: #171717;
-    color: white;
-}
-
-.how .section-head p {
-    color: #aaa;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-}
-
-.step-number {
-    font-size: 13px;
-    color: #ff766b;
-    font-weight: 900;
-}
-
-.steps h3 {
-    margin: 15px 0 10px;
-    font-size: 20px;
-}
-
-.steps p {
-    color: #aaa;
-    line-height: 1.8;
-    font-size: 14px;
-}
-
-.legal-content {
-    background: white;
-    border: 1px solid #e9e6e0;
-    padding: 25px;
-    border-radius: 14px;
-    line-height: 1.8;
-    color: #666;
-    font-size: 14px;
-}
-
-.legal-content h3 {
-    color: #222;
-    margin: 18px 0 6px;
-}
-
-.legal-content h3:first-child {
-    margin-top: 0;
-}
-
-footer {
-    background: #111;
-    color: #999;
-    padding: 35px 8%;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    font-size: 12px;
-}
-
-footer strong {
-    color: white;
-}
-
-#toast {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    max-width: calc(100vw - 50px);
-    background: #171717;
-    color: white;
-    padding: 16px 22px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px #0003;
-    opacity: 0;
-    transform: translateY(15px);
-    transition: .25s;
-    pointer-events: none;
-    z-index: 10;
-}
-
-#toast.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@media(max-width: 1000px) {
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero {
-        gap: 35px;
-    }
-}
-
-@media(max-width: 800px) {
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 60px;
-    }
-
-    .products,
-    .steps {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links a:not(.cart) {
-        display: none;
-    }
-
-    h1 {
-        letter-spacing: -2px;
-    }
-
-    .trust {
-        justify-content: center;
-    }
-
-    .hero-art {
-        min-height: 270px;
-    }
-}
-
-@media(max-width: 420px) {
-    nav {
-        padding: 18px 5%;
-    }
-
-    .logo {
-        font-size: 19px;
-    }
-
-    .cart {
-        padding: 9px 12px;
-    }
-
-    section {
-        padding: 55px 5%;
-    }
-
-    .hero {
-        padding: 55px 5%;
-    }
-
-    h2 {
-        font-size: 31px;
-    }
-
-    .card {
-        padding: 20px;
-    }
-
-    .card-bottom {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-}
+:root{--bg:#f8f7f4;--dark:#171717;--red:#c62828;--green:#16794b;--muted:#777;--border:#e8e5df}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--dark);line-height:1.6}
+button,input{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
+a{color:inherit}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 8%;background:white;border-bottom:1px solid var(--border);gap:20px}
+.logo{font-size:23px;font-weight:900;letter-spacing:-1px;text-decoration:none;white-space:nowrap}
+.logo span{color:var(--red)}
+.nav-links{display:flex;align-items:center;gap:23px}
+.nav-links a{text-decoration:none;color:#444;font-size:14px;font-weight:600}
+.nav-links a:hover{color:var(--red)}
+.cart-nav{background:var(--dark);color:white!important;padding:11px 17px;border-radius:8px}
+.hero{padding:85px 8%;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;background:white}
+.tag{display:inline-block;background:#fcebea;color:var(--red);font-size:12px;font-weight:800;padding:8px 13px;border-radius:30px;margin-bottom:22px;text-transform:uppercase;letter-spacing:1px}
+h1{font-size:clamp(42px,6vw,74px);letter-spacing:-3px;line-height:1.04;margin-bottom:24px}
+h1 span{color:var(--red)}
+.hero p{color:#666;font-size:17px;line-height:1.8;max-width:510px}
+.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:13px 20px;border:0;border-radius:9px;font-weight:800;font-size:14px;text-decoration:none;display:inline-block;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--red);color:white}
+.primary:hover{background:#a91f1f}
+.secondary{background:#f0efec;color:#222}
+.hero-art{background:#f5e7d0;border-radius:24px;padding:35px;text-align:center;min-height:320px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 25px 60px #4b30201a}
+.hero-art .emoji{font-size:95px}
+.hero-art h3{margin-top:15px;font-size:23px}
+.hero-art p{margin:8px auto 0;font-size:13px}
+.trust{padding:23px 8%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--border);color:#777;font-size:11px;font-weight:800}
+section{padding:70px 8%}
+.section-head{margin-bottom:30px}
+.section-head small{color:var(--green);font-weight:800;text-transform:uppercase;letter-spacing:1.5px}
+h2{font-size:clamp(29px,4vw,38px);letter-spacing:-1.3px;line-height:1.2;margin:10px 0}
+.section-head p{color:var(--muted);line-height:1.7}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:white;border:1px solid var(--border);border-radius:16px;padding:23px;transition:.2s;min-width:0}
+.card:hover{transform:translateY(-3px);box-shadow:0 15px 35px #0000000b}
+.card-emoji{height:130px;display:grid;place-items:center;font-size:62px;background:#f7f3ed;border-radius:12px;margin-bottom:20px}
+.card h3{font-size:18px;margin-bottom:8px}
+.card p{color:#777;font-size:13px;line-height:1.7;min-height:66px}
+.card-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px}
+.price{font-size:21px;font-weight:900;white-space:nowrap}
+.add{background:var(--dark);color:white;border:0;padding:11px 13px;border-radius:8px;font-size:13px;font-weight:800}
+.add:hover{background:var(--red)}
+.profile-card{overflow:hidden;background:white;border:1px solid var(--border);border-radius:16px;max-width:420px}
+.profile-card img{display:block;width:100%;height:330px;object-fit:cover;object-position:center}
+.profile-info{padding:22px}
+.profile-info h3{font-size:21px}
+.profile-info p{font-size:13px;color:var(--muted);margin-top:5px}
+.how{background:#171717;color:white}
+.how .section-head p{color:#aaa}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.step-number{font-size:12px;color:#ff766b;font-weight:900}
+.steps h3{margin:13px 0 8px;font-size:19px}
+.steps p{color:#aaa;line-height:1.8;font-size:14px}
+.info-panel{background:white;border:1px solid var(--border);padding:24px;border-radius:14px;color:#666;font-size:14px;line-height:1.8}
+footer{background:#111;color:#999;padding:32px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+footer strong{color:white}
+.view{display:none;min-height:70vh}
+.view.active{display:block}
+.page-heading{margin-bottom:28px}
+.page-heading p{color:var(--muted);margin-top:7px}
+.cart-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:25px;align-items:start}
+.cart-items{display:grid;gap:14px}
+.cart-item{display:grid;grid-template-columns:1fr auto;gap:15px;background:white;border:1px solid var(--border);border-radius:13px;padding:20px}
+.cart-item h3{font-size:16px}
+.cart-item p{font-size:13px;color:var(--muted)}
+.cart-item-right{text-align:right}
+.quantity{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:9px}
+.quantity button{border:1px solid var(--border);background:white;border-radius:6px;width:29px;height:29px;font-weight:800}
+.remove{display:block;margin:8px 0 0 auto;border:0;background:none;color:var(--red);font-size:12px}
+.summary{background:white;border:1px solid var(--border);border-radius:14px;padding:23px;position:sticky;top:20px}
+.summary h3{margin-bottom:16px}
+.summary-line{display:flex;justify-content:space-between;gap:12px;margin:10px 0;color:#666;font-size:14px}
+.summary-total{border-top:1px solid var(--border);padding-top:15px;margin-top:16px;font-size:18px;font-weight:900;color:var(--dark)}
+.full-btn{width:100%;padding:14px;border:0;border-radius:9px;background:var(--red);color:white;font-weight:800;margin-top:15px}
+.full-btn:hover{background:#a91f1f}
+.full-btn:disabled{opacity:.5;cursor:not-allowed}
+.back-btn{border:0;background:none;color:#555;font-weight:700;margin-bottom:22px;padding:0}
+.back-btn:hover{color:var(--red)}
+.empty{text-align:center;background:white;border:1px solid var(--border);border-radius:15px;padding:45px 20px}
+.empty .emoji{font-size:55px}
+.empty p{color:var(--muted);margin:8px 0 20px}
+.checkout-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:25px;align-items:start}
+.panel{background:white;border:1px solid var(--border);border-radius:15px;padding:25px}
+.panel h3{margin-bottom:8px}
+.panel-desc{font-size:13px;color:var(--muted);margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:750;margin-bottom:6px}
+.field input{width:100%;padding:12px 13px;border:1px solid #ddd;border-radius:8px;background:white;outline:none}
+.field input:focus{border-color:var(--red);box-shadow:0 0 0 3px #c6282814}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.order-lines{display:grid;gap:12px}
+.order-line{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#666}
+.processing{text-align:center;padding:70px 15px}
+.spinner{width:45px;height:45px;border:4px solid #eee;border-top-color:var(--red);border-radius:50%;margin:0 auto 22px;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.confirmation{max-width:680px;margin:0 auto;text-align:center}
+.success-icon{width:76px;height:76px;border-radius:50%;background:#e7f6ed;color:var(--green);display:grid;place-items:center;font-size:38px;margin:0 auto 20px}
+.receipt{margin-top:28px;background:white;border:1px solid var(--border);border-radius:15px;padding:25px;text-align:left}
+.receipt-heading{display:flex;justify-content:space-between;gap:15px;border-bottom:1px solid var(--border);padding-bottom:15px;margin-bottom:17px}
+.receipt-line{display:flex;justify-content:space-between;gap:15px;margin:10px 0;font-size:14px}
+.receipt-total{border-top:1px solid var(--border);padding-top:15px;margin-top:16px;font-size:18px;font-weight:900}
+.receipt-number{display:inline-block;background:#f3f3f3;padding:9px 12px;border-radius:7px;font-family:monospace;font-weight:800;overflow-wrap:anywhere}
+.receipt-note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.7}
+#toast{position:fixed;bottom:24px;right:24px;max-width:calc(100vw - 48px);background:#171717;color:white;padding:15px 20px;border-radius:10px;box-shadow:0 10px 30px #0003;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none;z-index:100}
+#toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:1000px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.cart-layout,.checkout-layout{grid-template-columns:1fr}.summary{position:static}}
+@media(max-width:800px){nav{padding:18px 5%}.hero{grid-template-columns:1fr;padding:55px 5%;gap:30px}section{padding:55px 5%}.nav-links{gap:10px}.nav-links a:not(.cart-nav){display:none}.trust{justify-content:center}.steps{grid-template-columns:1fr}.hero-art{min-height:260px}}
+@media(max-width:520px){.products{grid-template-columns:1fr}.card-bottom{align-items:flex-start}.form-row{grid-template-columns:1fr}.cart-item{grid-template-columns:1fr}.cart-item-right{text-align:left}.quantity{justify-content:flex-start}.remove{margin-left:0}.receipt-heading{flex-direction:column}h1{letter-spacing:-2px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+@media print{body{background:white}nav,footer,#toast,.actions,.back-btn{display:none!important}.view{display:none!important}#confirmation-view{display:block!important;min-height:0}#confirmation-view section{padding:0}.receipt{box-shadow:none;border:1px solid #ddd}}
 </style>
 </head>
-
 <body>
 
 <nav>
-    <a href="#" class="logo">Order<span>A</span>Mexican<span>.</span></a>
-
-    <div class="nav-links">
-        <a href="#catalog">Services</a>
-        <a href="#process">Our Process</a>
-        <a href="#legal">Information</a>
-        <a href="#catalog" class="cart">Cart (<span id="cart-count">0</span>)</a>
-    </div>
+<a href="#" class="logo" onclick="showView('home');return false">Order<span>A</span>Mexican<span>.</span></a>
+<div class="nav-links">
+<a href="#catalog" onclick="showView('home')">Services</a>
+<a href="#process" onclick="showView('home')">Our Process</a>
+<a href="#" class="cart-nav" onclick="showView('cart');return false">Cart (<span id="cart-count">0</span>)</a>
+</div>
 </nav>
 
+<main>
+<div id="home-view" class="view active">
 <header class="hero">
-    <div>
-        <div class="tag">Professional Services & Connections</div>
-
-        <h1>Find the right expertise.<br><span>Make it happen.</span></h1>
-
-        <p>
-            Discover professional services tailored to your needs.
-            Explore our range of service categories, compare options,
-            and find the expertise to help you move forward.
-        </p>
-
-        <div class="actions">
-            <a href="#catalog" class="btn primary">Explore Services ↗</a>
-            <a href="#process" class="btn secondary">How It Works</a>
-        </div>
-    </div>
-
-    <div class="hero-art">
-        <div class="emoji">🤝</div>
-        <h3>People. Expertise. Opportunity.</h3>
-        <p>Connecting skills with needs through a streamlined experience.</p>
-    </div>
+<div>
+<div class="tag">Professional Services & Connections</div>
+<h1>Find the right expertise.<br><span>Make it happen.</span></h1>
+<p>Discover professional services tailored to your needs. Explore available categories and find the expertise to help you move forward.</p>
+<div class="actions">
+<a href="#catalog" class="btn primary">Explore Services ↗</a>
+<a href="#process" class="btn secondary">How It Works</a>
+</div>
+</div>
+<div class="hero-art">
+<div class="emoji">🤝</div>
+<h3>People. Expertise. Opportunity.</h3>
+<p>Connecting skills with needs through a streamlined experience.</p>
+</div>
 </header>
 
 <div class="trust">
-    <span>✓ CUSTOMER-FOCUSED SERVICE</span>
-    <span>✓ CLEAR PRICING</span>
-    <span>✓ SIMPLE SERVICE DISCOVERY</span>
-    <span>✓ PROFESSIONAL EXPERIENCE</span>
+<span>✓ CUSTOMER-FOCUSED SERVICE</span>
+<span>✓ CLEAR PRICING</span>
+<span>✓ SIMPLE SERVICE DISCOVERY</span>
+<span>✓ PROFESSIONAL EXPERIENCE</span>
 </div>
 
 <section id="catalog">
-    <div class="section-head">
-        <small>Explore our services</small>
-        <h2>Solutions for every need.</h2>
-        <p>Browse service categories and discover the expertise you're looking for.</p>
-    </div>
+<div class="section-head">
+<small>Explore our services</small>
+<h2>Solutions for every need.</h2>
+<p>Browse categories and add your selections to the cart.</p>
+</div>
+<div class="products">
+<article class="card"><div class="card-emoji">🌮</div><h3>Culinary Consulting</h3><p>Culinary guidance, menu planning, food preparation strategies, and recommendations for your next project.</p><div class="card-bottom"><span class="price">$19.99</span><button class="add" onclick="addToCart('culinary')">Add to Cart +</button></div></article>
+<article class="card"><div class="card-emoji">💻</div><h3>IT Support</h3><p>Technical troubleshooting, software guidance, system optimization, and assistance with common technology challenges.</p><div class="card-bottom"><span class="price">$49.99</span><button class="add" onclick="addToCart('it')">Add to Cart +</button></div></article>
+<article class="card"><div class="card-emoji">📊</div><h3>Business Consulting</h3><p>Strategic planning, workflow improvement, operational guidance, and business development support.</p><div class="card-bottom"><span class="price">$99.99</span><button class="add" onclick="addToCart('business')">Add to Cart +</button></div></article>
+<article class="card"><div class="card-emoji">🎨</div><h3>Graphic Design</h3><p>Creative direction, visual identity development, branding concepts, and digital design support.</p><div class="card-bottom"><span class="price">$34.99</span><button class="add" onclick="addToCart('design')">Add to Cart +</button></div></article>
+<article class="card"><div class="card-emoji">⚖️</div><h3>Legal Consultation</h3><p>Information about consultation services, professional guidance, and resources for understanding your options.</p><div class="card-bottom"><span class="price">$299.99</span><button class="add" onclick="addToCart('legal')">Add to Cart +</button></div></article>
+<article class="card"><div class="card-emoji">👤</div><h3>Personal Assistance</h3><p>Organizational support, task coordination, scheduling assistance, and help with everyday responsibilities.</p><div class="card-bottom"><span class="price">$9.99</span><button class="add" onclick="addToCart('personal')">Add to Cart +</button></div></article>
+</div>
+</section>
 
-    <div class="products">
-        <article class="card">
-            <div class="card-emoji">🌮</div>
-            <h3>Culinary Consulting</h3>
-            <p>Explore culinary guidance, menu planning, food preparation strategies, and practical recommendations for your next project.</p>
-            <div class="card-bottom">
-                <span class="price">$19.99</span>
-                <button class="add" onclick="addToCart('Culinary Consulting')">Select Service +</button>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-emoji">💻</div>
-            <h3>IT Support</h3>
-            <p>Technical troubleshooting, software guidance, system optimization, and assistance with common technology challenges.</p>
-            <div class="card-bottom">
-                <span class="price">$49.99</span>
-                <button class="add" onclick="addToCart('IT Support')">Select Service +</button>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-emoji">📊</div>
-            <h3>Business Consulting</h3>
-            <p>Strategic planning, workflow improvement, operational guidance, and support for business development initiatives.</p>
-            <div class="card-bottom">
-                <span class="price">$99.99</span>
-                <button class="add" onclick="addToCart('Business Consulting')">Select Service +</button>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-emoji">🎨</div>
-            <h3>Graphic Design</h3>
-            <p>Creative direction, visual identity development, branding concepts, and design support for digital projects.</p>
-            <div class="card-bottom">
-                <span class="price">$34.99</span>
-                <button class="add" onclick="addToCart('Graphic Design')">Select Service +</button>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-emoji">⚖️</div>
-            <h3>Legal Consultation</h3>
-            <p>Find information about legal consultation services, professional guidance, and resources for understanding your options.</p>
-            <div class="card-bottom">
-                <span class="price">$299.99</span>
-                <button class="add" onclick="addToCart('Legal Consultation')">Select Service +</button>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-emoji">👤</div>
-            <h3>Personal Assistance</h3>
-            <p>Organizational support, task coordination, scheduling assistance, and help managing everyday professional responsibilities.</p>
-            <div class="card-bottom">
-                <span class="price">$9.99</span>
-                <button class="add" onclick="addToCart('Personal Assistance')">Select Service +</button>
-            </div>
-        </article>
-    </div>
+<section id="leadership">
+<div class="section-head"><small>Leadership</small><h2>Meet Angelina.</h2><p>Leadership and organizational profile.</p></div>
+<article class="profile-card">
+<img src="https://raw.githubusercontent.com/AC1DST4R/orderamexican/refs/heads/main/Angie.png" alt="Angelina Verdugo" loading="lazy">
+<div class="profile-info"><h3>Angelina Verdugo - Head Mexican</h3><p>Leadership profile</p></div>
+</article>
 </section>
 
 <section class="how" id="process">
-    <div class="section-head">
-        <small>A straightforward experience</small>
-        <h2>Three steps to get started.</h2>
-        <p>A simple approach to finding and selecting services that fit your requirements.</p>
-    </div>
-
-    <div class="steps">
-        <div>
-            <div class="step-number">STEP 01 / EXPLORE</div>
-            <h3>Browse available services.</h3>
-            <p>Review the available categories, learn about each offering, and identify services that align with your goals.</p>
-        </div>
-
-        <div>
-            <div class="step-number">STEP 02 / SELECT</div>
-            <h3>Choose what you need.</h3>
-            <p>Select the services that best suit your requirements and review your selections before proceeding.</p>
-        </div>
-
-        <div>
-            <div class="step-number">STEP 03 / CONNECT</div>
-            <h3>Take the next step.</h3>
-            <p>Review your service selections and proceed to the appropriate inquiry or booking process when available.</p>
-        </div>
-    </div>
+<div class="section-head"><small>A straightforward experience</small><h2>Three steps to get started.</h2><p>Explore, select, and review your choices.</p></div>
+<div class="steps">
+<div><div class="step-number">STEP 01 / EXPLORE</div><h3>Browse services.</h3><p>Review categories and identify the services that align with your goals.</p></div>
+<div><div class="step-number">STEP 02 / SELECT</div><h3>Build your cart.</h3><p>Add selections, adjust quantities, and review the order summary.</p></div>
+<div><div class="step-number">STEP 03 / COMPLETE</div><h3>Place your order.</h3><p>Review your selections and generate an order receipt.</p></div>
+</div>
 </section>
 
-<section id="legal">
-    <div class="section-head">
-        <small>Additional information</small>
-        <h2>Terms & service information.</h2>
-        <p>Important information about service selection, pricing, and inquiries.</p>
-    </div>
-
-    <div class="legal-content">
-        <h3>Service Information</h3>
-        <p>
-            Services are presented with descriptions and listed prices to
-            help visitors evaluate available options. Specific service
-            details, availability, scheduling, and scope may vary by provider.
-        </p>
-
-        <h3>Pricing & Payments</h3>
-        <p>
-            Listed prices are displayed in USD. Any applicable fees,
-            payment requirements, and service conditions should be confirmed
-            before a booking or purchase is finalized.
-        </p>
-
-        <h3>Privacy & Personal Information</h3>
-        <p>
-            Personal information should only be provided through designated,
-            secure communication or transaction channels. Avoid sharing
-            sensitive information through unsecured forms or messages.
-        </p>
-
-        <h3>Contact & Inquiries</h3>
-        <p>
-            For questions about service options, pricing, or availability,
-            use the appropriate contact channel provided by the service operator.
-        </p>
-    </div>
+<section>
+<div class="section-head"><small>Information</small><h2>Service information.</h2></div>
+<div class="info-panel">Prices are displayed in USD. Service details and availability should be verified before any real-world engagement.</div>
 </section>
+</div>
+
+<div id="cart-view" class="view">
+<section>
+<button class="back-btn" onclick="showView('home')">← Continue browsing</button>
+<div class="page-heading"><h2>Your shopping cart</h2><p>Review your selections and adjust quantities before checkout.</p></div>
+<div id="cart-content"></div>
+</section>
+</div>
+
+<div id="checkout-view" class="view">
+<section>
+<button class="back-btn" onclick="showView('cart')">← Return to cart</button>
+<div class="page-heading"><h2>Checkout</h2><p>Review your order and enter your customer information.</p></div>
+<div class="checkout-layout">
+<div class="panel">
+<h3>Customer Information</h3>
+<p class="panel-desc">Enter your details to complete your order.</p>
+<form id="checkout-form">
+<div class="field"><label for="customer-name">Customer Name</label><input id="customer-name" type="text" maxlength="80" autocomplete="name" required></div>
+<div class="field"><label for="customer-email">Email Address</label><input id="customer-email" type="email" maxlength="120" autocomplete="email" required></div>
+<button class="full-btn" id="pay-button" type="submit">Complete Order</button>
+</form>
+</div>
+<aside class="summary">
+<h3>Order summary</h3>
+<div id="checkout-lines" class="order-lines"></div>
+<div class="summary-line"><span>Subtotal</span><strong id="checkout-subtotal">$0.00</strong></div>
+<div class="summary-line"><span>Fees</span><strong>$0.00</strong></div>
+<div class="summary-line summary-total"><span>Total</span><strong id="checkout-total">$0.00</strong></div>
+</aside>
+</div>
+</section>
+</div>
+
+<div id="processing-view" class="view">
+<section class="processing">
+<div class="spinner"></div>
+<h2>Processing your order...</h2>
+<p style="color:#777;margin-top:10px">Preparing your order confirmation.</p>
+</section>
+</div>
+
+<div id="confirmation-view" class="view">
+<section>
+<div class="confirmation">
+<div class="success-icon">✓</div>
+<div class="tag">Order completed</div>
+<h2>Order confirmed!</h2>
+<p style="color:#777">Your order summary is ready.</p>
+<div class="receipt">
+<div class="receipt-heading">
+<div><strong>OrderAMexican.com</strong><p style="font-size:12px;color:#888">Order Receipt</p></div>
+<div style="text-align:right"><span style="font-size:12px;color:#888">STATUS</span><br><strong style="color:var(--green)">ORDER COMPLETE</strong></div>
+</div>
+<p style="font-size:12px;color:#888;margin-bottom:7px">ORDER NUMBER</p>
+<div id="receipt-number" class="receipt-number"></div>
+<div style="margin-top:20px">
+<div class="receipt-line"><span>Customer</span><strong id="receipt-name"></strong></div>
+<div class="receipt-line"><span>Email</span><strong id="receipt-email" style="overflow-wrap:anywhere;text-align:right"></strong></div>
+<div class="receipt-line"><span>Date</span><strong id="receipt-date"></strong></div>
+</div>
+<div id="receipt-items" style="border-top:1px solid var(--border);padding-top:15px;margin-top:18px"></div>
+<div class="receipt-line receipt-total"><span>Order Total</span><strong id="receipt-total"></strong></div>
+<p class="receipt-note">This order confirmation records the selections shown above. No payment is processed by this website.</p>
+</div>
+<div class="actions" style="justify-content:center">
+<button class="btn secondary" onclick="printReceipt()">Print receipt</button>
+<button class="btn primary" onclick="finishOrder()">Return to homepage</button>
+</div>
+</div>
+</section>
+</div>
+</main>
 
 <footer>
-    <div>
-        <strong>OrderAMexican.com</strong><br>
-        Professional Services & Connections
-    </div>
-
-    <div>
-        © 2026 OrderAMexican.com.<br>
-        All rights reserved.
-    </div>
+<div><strong>OrderAMexican.com</strong><br>Professional Services & Connections</div>
+<div>© 2026 OrderAMexican.com.<br>All rights reserved.</div>
 </footer>
-
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
-let cartCount = 0;
+const services={
+culinary:{name:"Culinary Consulting",price:19.99},
+it:{name:"IT Support",price:49.99},
+business:{name:"Business Consulting",price:99.99},
+design:{name:"Graphic Design",price:34.99},
+legal:{name:"Legal Consultation",price:299.99},
+personal:{name:"Personal Assistance",price:9.99}
+};
+
+let cart={};
 let toastTimer;
+let lastReceipt=null;
 
-const cartCountElement = document.getElementById("cart-count");
-const toast = document.getElementById("toast");
+const money=value=>"$"+value.toFixed(2);
+const cartCount=document.getElementById("cart-count");
+const toast=document.getElementById("toast");
 
-function addToCart(product) {
-    cartCount++;
-    cartCountElement.textContent = cartCount;
-
-    toast.textContent = product + " added to your selections.";
-    toast.classList.add("show");
-
-    clearTimeout(toastTimer);
-
-    toastTimer = setTimeout(() => {
-        toast.classList.remove("show");
-    }, 2600);
+function showToast(message){
+toast.textContent=message;
+toast.classList.add("show");
+clearTimeout(toastTimer);
+toastTimer=setTimeout(()=>toast.classList.remove("show"),2500);
 }
-</script>
 
+function showView(name){
+document.querySelectorAll(".view").forEach(view=>view.classList.remove("active"));
+const view=document.getElementById(name+"-view");
+if(view)view.classList.add("active");
+if(name==="cart")renderCart();
+if(name==="checkout")renderCheckout();
+window.scrollTo({top:0,behavior:"auto"});
+}
+
+function itemCount(){
+return Object.values(cart).reduce((sum,qty)=>sum+qty,0);
+}
+
+function subtotal(){
+return Object.entries(cart).reduce((sum,[id,qty])=>sum+(services[id]?services[id].price*qty:0),0);
+}
+
+function updateCartCount(){
+cartCount.textContent=itemCount();
+}
+
+function addToCart(id){
+if(!services[id])return;
+cart[id]=(cart[id]||0)+1;
+updateCartCount();
+showToast(services[id].name+" added to cart.");
+}
+
+function changeQuantity(id,delta){
+if(!services[id])return;
+cart[id]=(cart[id]||0)+delta;
+if(cart[id]<=0)delete cart[id];
+updateCartCount();
+renderCart();
+}
+
+function removeItem(id){
+delete cart[id];
+updateCartCount();
+renderCart();
+showToast("Item removed from cart.");
+}
+
+function renderCart(){
+const container=document.getElementById("cart-content");
+const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
+
+if(!entries.length){
+container.innerHTML=`
+<div class="empty">
+<div class="emoji">🛒</div>
+<h3>Your cart is empty.</h3>
+<p>Explore the catalog to add services to your cart.</p>
+<button class="btn primary" onclick="showView('home')">Browse services</button>
+</div>`;
+return;
+}
+
+container.innerHTML=`
+<div class="cart-layout">
+<div class="cart-items">
+${entries.map(([id,qty])=>`
+<article class="cart-item">
+<div><h3>${services[id].name}</h3><p>${money(services[id].price)} per item</p></div>
+<div class="cart-item-right">
+<strong>${money(services[id].price*qty)}</strong>
+<div class="quantity">
+<button aria-label="Decrease quantity" onclick="changeQuantity('${id}',-1)">−</button>
+<span>${qty}</span>
+<button aria-label="Increase quantity" onclick="changeQuantity('${id}',1)">+</button>
+</div>
+<button class="remove" onclick="removeItem('${id}')">Remove</button>
+</div>
+</article>`).join("")}
+</div>
+<aside class="summary">
+<h3>Order summary</h3>
+<div class="summary-line"><span>Items</span><strong>${itemCount()}</strong></div>
+<div class="summary-line"><span>Subtotal</span><strong>${money(subtotal())}</strong></div>
+<div class="summary-line"><span>Fees</span><strong>$0.00</strong></div>
+<div class="summary-line summary-total"><span>Total</span><strong>${money(subtotal())}</strong></div>
+<button class="full-btn" onclick="showView('checkout')">Proceed to checkout →</button>
+<button class="full-btn" style="background:#eee;color:#222;margin-top:9px" onclick="showView('home')">Continue browsing</button>
+</aside>
+</div>`;
+}
+
+function renderCheckout(){
+if(!itemCount()){
+showView("cart");
+return;
+}
+const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
+document.getElementById("checkout-lines").innerHTML=entries.map(([id,qty])=>`
+<div class="order-line"><span>${services[id].name} × ${qty}</span><strong>${money(services[id].price*qty)}</strong></div>`).join("");
+document.getElementById("checkout-subtotal").textContent=money(subtotal());
+document.getElementById("checkout-total").textContent=money(subtotal());
+}
+
+document.getElementById("checkout-form").addEventListener("submit",function(event){
+event.preventDefault();
+if(!itemCount()){
+showView("cart");
+return;
+}
+
+const name=document.getElementById("customer-name").value.trim();
+const email=document.getElementById("customer-email").value.trim();
+
+if(!name||!email||!this.checkValidity()){
+this.reportValidity();
+return;
+}
+
+const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
+lastReceipt={
+number:"ORD-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,7).toUpperCase(),
+name,
+email,
+date:new Date().toLocaleString(),
+items:entries.map(([id,qty])=>({name:services[id].name,quantity:qty,total:services[id].price*qty})),
+total:subtotal()
+};
+
+document.getElementById("pay-button").disabled=true;
+showView("processing");
+
+setTimeout(()=>{
+renderReceipt(lastReceipt);
+document.getElementById("checkout-form").reset();
+document.getElementById("pay-button").disabled=false;
+showView("confirmation");
+},900);
+});
+
+function renderReceipt(receipt){
+document.getElementById("receipt-number").textContent=receipt.number;
+document.getElementById("receipt-name").textContent=receipt.name;
+document.getElementById("receipt-email").textContent=receipt.email;
+document.getElementById("receipt-date").textContent=receipt.date;
+document.getElementById("receipt-total").textContent=money(receipt.total);
+document.getElementById("receipt-items").innerHTML=receipt.items.map(item=>`
+<div class="receipt-line"><span>${item.name} × ${item.quantity}</span><strong>${money(item.total)}</strong></div>`).join("");
+}
+
+function printReceipt(){
+if(lastReceipt)window.print();
+}
+
+function finishOrder(){
+cart={};
+lastReceipt=null;
+updateCartCount();
+showView("home");
+showToast("Welcome back!");
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+if(link.classList.contains("cart-nav")||link.classList.contains("logo"))return;
+link.addEventListener("click",function(event){
+const targetId=this.getAttribute("href");
+if(!targetId||targetId==="#")return;
+const target=document.querySelector(targetId);
+if(target&&document.getElementById("home-view").classList.contains("active")){
+event.preventDefault();
+target.scrollIntoView({behavior:"smooth"});
+}
+});
+});
+
+updateCartCount();
+</script>
 </body>
 </html>
