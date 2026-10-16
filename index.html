@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,7 +99,11 @@ footer strong{color:white}
 .field label{display:block;font-size:13px;font-weight:750;margin-bottom:6px}
 .field input{width:100%;padding:12px 13px;border:1px solid #ddd;border-radius:8px;background:white;outline:none}
 .field input:focus{border-color:var(--red);box-shadow:0 0 0 3px #c6282814}
+.field .error-msg{display:none;color:var(--red);font-size:12px;margin-top:6px;font-weight:700}
+.field.invalid input{border-color:var(--red)}
+.field.invalid .error-msg{display:block}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
 .order-lines{display:grid;gap:12px}
 .order-line{display:flex;justify-content:space-between;gap:12px;font-size:13px;color:#666}
 .processing{text-align:center;padding:70px 15px}
@@ -114,11 +117,14 @@ footer strong{color:white}
 .receipt-total{border-top:1px solid var(--border);padding-top:15px;margin-top:16px;font-size:18px;font-weight:900}
 .receipt-number{display:inline-block;background:#f3f3f3;padding:9px 12px;border-radius:7px;font-family:monospace;font-weight:800;overflow-wrap:anywhere}
 .receipt-note{font-size:12px;color:var(--muted);margin-top:18px;line-height:1.7}
+.demo-banner{display:flex;gap:12px;align-items:flex-start;background:#fff7e6;border:1px solid #f3cf7a;color:#7a5a00;padding:16px 18px;border-radius:12px;margin-bottom:22px;font-size:13px;line-height:1.7}
+.demo-banner .icon{font-size:20px;line-height:1}
+.demo-banner strong{display:block;margin-bottom:3px;color:#5c4400}
 #toast{position:fixed;bottom:24px;right:24px;max-width:calc(100vw - 48px);background:#171717;color:white;padding:15px 20px;border-radius:10px;box-shadow:0 10px 30px #0003;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none;z-index:100}
 #toast.show{opacity:1;transform:translateY(0)}
 @media(max-width:1000px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.cart-layout,.checkout-layout{grid-template-columns:1fr}.summary{position:static}}
 @media(max-width:800px){nav{padding:18px 5%}.hero{grid-template-columns:1fr;padding:55px 5%;gap:30px}section{padding:55px 5%}.nav-links{gap:10px}.nav-links a:not(.cart-nav){display:none}.trust{justify-content:center}.steps{grid-template-columns:1fr}.hero-art{min-height:260px}}
-@media(max-width:520px){.products{grid-template-columns:1fr}.card-bottom{align-items:flex-start}.form-row{grid-template-columns:1fr}.cart-item{grid-template-columns:1fr}.cart-item-right{text-align:left}.quantity{justify-content:flex-start}.remove{margin-left:0}.receipt-heading{flex-direction:column}h1{letter-spacing:-2px}}
+@media(max-width:520px){.products{grid-template-columns:1fr}.card-bottom{align-items:flex-start}.form-row,.form-row-3{grid-template-columns:1fr}.cart-item{grid-template-columns:1fr}.cart-item-right{text-align:left}.quantity{justify-content:flex-start}.remove{margin-left:0}.receipt-heading{flex-direction:column}h1{letter-spacing:-2px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
 @media print{body{background:white}nav,footer,#toast,.actions,.back-btn{display:none!important}.view{display:none!important}#confirmation-view{display:block!important;min-height:0}#confirmation-view section{padding:0}.receipt{box-shadow:none;border:1px solid #ddd}}
 </style>
@@ -218,7 +224,7 @@ footer strong{color:white}
 <form id="checkout-form">
 <div class="field"><label for="customer-name">Customer Name</label><input id="customer-name" type="text" maxlength="80" autocomplete="name" required></div>
 <div class="field"><label for="customer-email">Email Address</label><input id="customer-email" type="email" maxlength="120" autocomplete="email" required></div>
-<button class="full-btn" id="pay-button" type="submit">Complete Order</button>
+<button class="full-btn" id="pay-button" type="submit">Continue to Payment →</button>
 </form>
 </div>
 <aside class="summary">
@@ -227,6 +233,47 @@ footer strong{color:white}
 <div class="summary-line"><span>Subtotal</span><strong id="checkout-subtotal">$0.00</strong></div>
 <div class="summary-line"><span>Fees</span><strong>$0.00</strong></div>
 <div class="summary-line summary-total"><span>Total</span><strong id="checkout-total">$0.00</strong></div>
+</aside>
+</div>
+</section>
+</div>
+
+<div id="payment-view" class="view">
+<section>
+<button class="back-btn" onclick="showView('checkout')">← Return to your information</button>
+<div class="page-heading"><h2>Payment details</h2><p>Enter payment and billing address to review your order.</p></div>
+<div class="demo-banner">
+<span class="icon">⚠️</span>
+<div><strong>Demo payment form — no real payment is processed.</strong>Do not enter real card details. This is a prototype checkout for demonstration purposes only; any information entered here stays in your browser and is never sent to a server or stored.</div>
+</div>
+<div class="checkout-layout">
+<div class="panel">
+<h3>Card Information</h3>
+<p class="panel-desc">Fake/test details only — this field set does not connect to a payment processor.</p>
+<form id="payment-form" novalidate>
+<div class="field" id="field-card-name"><label for="card-name">Name on Card</label><input id="card-name" type="text" maxlength="80" autocomplete="cc-name" placeholder="e.g. Jane Doe" required><p class="error-msg">Enter the name on the card.</p></div>
+<div class="field" id="field-card-number"><label for="card-number">Card Number</label><input id="card-number" type="text" inputmode="numeric" maxlength="19" autocomplete="cc-number" placeholder="0000 0000 0000 0000" required><p class="error-msg">Enter a valid test card number.</p></div>
+<div class="form-row">
+<div class="field" id="field-card-expiry"><label for="card-expiry">Expiry (MM/YY)</label><input id="card-expiry" type="text" inputmode="numeric" maxlength="5" autocomplete="cc-exp" placeholder="MM/YY" required><p class="error-msg">Enter a valid future expiry date.</p></div>
+<div class="field" id="field-card-cvv"><label for="card-cvv">CVV</label><input id="card-cvv" type="text" inputmode="numeric" maxlength="4" autocomplete="cc-csc" placeholder="123" required><p class="error-msg">Enter a 3 or 4 digit CVV.</p></div>
+</div>
+<h3 style="margin-top:22px">Billing Address</h3>
+<p class="panel-desc">Fake address only — used for this demo receipt alone.</p>
+<div class="field" id="field-address-street"><label for="address-street">Street Address</label><input id="address-street" type="text" maxlength="120" autocomplete="address-line1" placeholder="123 Main St" required><p class="error-msg">Enter a street address.</p></div>
+<div class="form-row-3">
+<div class="field" id="field-address-city"><label for="address-city">City</label><input id="address-city" type="text" maxlength="60" autocomplete="address-level2" required><p class="error-msg">Required.</p></div>
+<div class="field" id="field-address-state"><label for="address-state">State</label><input id="address-state" type="text" maxlength="30" autocomplete="address-level1" required><p class="error-msg">Required.</p></div>
+<div class="field" id="field-address-zip"><label for="address-zip">ZIP Code</label><input id="address-zip" type="text" inputmode="numeric" maxlength="10" autocomplete="postal-code" required><p class="error-msg">Required.</p></div>
+</div>
+<button class="full-btn" id="place-order-button" type="submit">Review &amp; Complete Order (Demo)</button>
+</form>
+</div>
+<aside class="summary">
+<h3>Order summary</h3>
+<div id="payment-lines" class="order-lines"></div>
+<div class="summary-line"><span>Subtotal</span><strong id="payment-subtotal">$0.00</strong></div>
+<div class="summary-line"><span>Fees</span><strong>$0.00</strong></div>
+<div class="summary-line summary-total"><span>Total</span><strong id="payment-total">$0.00</strong></div>
 </aside>
 </div>
 </section>
@@ -258,6 +305,7 @@ footer strong{color:white}
 <div class="receipt-line"><span>Customer</span><strong id="receipt-name"></strong></div>
 <div class="receipt-line"><span>Email</span><strong id="receipt-email" style="overflow-wrap:anywhere;text-align:right"></strong></div>
 <div class="receipt-line"><span>Date</span><strong id="receipt-date"></strong></div>
+<div class="receipt-line"><span>Billing Address</span><strong id="receipt-address" style="overflow-wrap:anywhere;text-align:right"></strong></div>
 </div>
 <div id="receipt-items" style="border-top:1px solid var(--border);padding-top:15px;margin-top:18px"></div>
 <div class="receipt-line receipt-total"><span>Order Total</span><strong id="receipt-total"></strong></div>
@@ -291,6 +339,7 @@ personal:{name:"Personal Assistance",price:9.99}
 let cart={};
 let toastTimer;
 let lastReceipt=null;
+let customerInfo=null;
 
 const money=value=>"$"+value.toFixed(2);
 const cartCount=document.getElementById("cart-count");
@@ -309,6 +358,7 @@ const view=document.getElementById(name+"-view");
 if(view)view.classList.add("active");
 if(name==="cart")renderCart();
 if(name==="checkout")renderCheckout();
+if(name==="payment")renderPayment();
 window.scrollTo({top:0,behavior:"auto"});
 }
 
@@ -402,6 +452,18 @@ document.getElementById("checkout-subtotal").textContent=money(subtotal());
 document.getElementById("checkout-total").textContent=money(subtotal());
 }
 
+function renderPayment(){
+if(!itemCount()){
+showView("cart");
+return;
+}
+const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
+document.getElementById("payment-lines").innerHTML=entries.map(([id,qty])=>`
+<div class="order-line"><span>${services[id].name} × ${qty}</span><strong>${money(services[id].price*qty)}</strong></div>`).join("");
+document.getElementById("payment-subtotal").textContent=money(subtotal());
+document.getElementById("payment-total").textContent=money(subtotal());
+}
+
 document.getElementById("checkout-form").addEventListener("submit",function(event){
 event.preventDefault();
 if(!itemCount()){
@@ -417,23 +479,120 @@ this.reportValidity();
 return;
 }
 
+customerInfo={name,email};
+showView("payment");
+});
+
+function setFieldError(fieldId,isInvalid){
+const field=document.getElementById(fieldId);
+if(field)field.classList.toggle("invalid",isInvalid);
+}
+
+function luhnCheck(digits){
+let sum=0,alt=false;
+for(let i=digits.length-1;i>=0;i--){
+let n=parseInt(digits[i],10);
+if(alt){n*=2;if(n>9)n-=9;}
+sum+=n;
+alt=!alt;
+}
+return sum%10===0;
+}
+
+document.getElementById("card-number").addEventListener("input",function(){
+const digits=this.value.replace(/\D/g,"").slice(0,19);
+this.value=digits.replace(/(.{4})/g,"$1 ").trim();
+});
+
+document.getElementById("card-expiry").addEventListener("input",function(){
+let digits=this.value.replace(/\D/g,"").slice(0,4);
+if(digits.length>=3)digits=digits.slice(0,2)+"/"+digits.slice(2);
+this.value=digits;
+});
+
+document.getElementById("card-cvv").addEventListener("input",function(){
+this.value=this.value.replace(/\D/g,"").slice(0,4);
+});
+
+document.getElementById("payment-form").addEventListener("submit",function(event){
+event.preventDefault();
+if(!itemCount()||!customerInfo){
+showView("cart");
+return;
+}
+
+const cardName=document.getElementById("card-name").value.trim();
+const cardNumberRaw=document.getElementById("card-number").value.replace(/\s/g,"");
+const expiry=document.getElementById("card-expiry").value.trim();
+const cvv=document.getElementById("card-cvv").value.trim();
+const street=document.getElementById("address-street").value.trim();
+const city=document.getElementById("address-city").value.trim();
+const state=document.getElementById("address-state").value.trim();
+const zip=document.getElementById("address-zip").value.trim();
+
+let valid=true;
+
+setFieldError("field-card-name",!cardName);
+if(!cardName)valid=false;
+
+const cardNumberValid=/^\d{13,19}$/.test(cardNumberRaw)&&luhnCheck(cardNumberRaw);
+setFieldError("field-card-number",!cardNumberValid);
+if(!cardNumberValid)valid=false;
+
+let expiryValid=false;
+const expiryMatch=/^(\d{2})\/(\d{2})$/.exec(expiry);
+if(expiryMatch){
+const month=parseInt(expiryMatch[1],10);
+const year=2000+parseInt(expiryMatch[2],10);
+if(month>=1&&month<=12){
+const expiryDate=new Date(year,month,0,23,59,59);
+if(expiryDate>=new Date())expiryValid=true;
+}
+}
+setFieldError("field-card-expiry",!expiryValid);
+if(!expiryValid)valid=false;
+
+const cvvValid=/^\d{3,4}$/.test(cvv);
+setFieldError("field-card-cvv",!cvvValid);
+if(!cvvValid)valid=false;
+
+setFieldError("field-address-street",!street);
+if(!street)valid=false;
+setFieldError("field-address-city",!city);
+if(!city)valid=false;
+setFieldError("field-address-state",!state);
+if(!state)valid=false;
+setFieldError("field-address-zip",!zip);
+if(!zip)valid=false;
+
+if(!valid){
+const firstInvalid=this.querySelector(".field.invalid input");
+if(firstInvalid)firstInvalid.focus();
+return;
+}
+
 const entries=Object.entries(cart).filter(([id,qty])=>services[id]&&qty>0);
 lastReceipt={
 number:"ORD-"+Date.now().toString(36).toUpperCase()+"-"+Math.random().toString(36).slice(2,7).toUpperCase(),
-name,
-email,
+name:customerInfo.name,
+email:customerInfo.email,
+address:`${street}, ${city}, ${state} ${zip}`,
+cardLast4:cardNumberRaw.slice(-4),
 date:new Date().toLocaleString(),
 items:entries.map(([id,qty])=>({name:services[id].name,quantity:qty,total:services[id].price*qty})),
 total:subtotal()
 };
 
-document.getElementById("pay-button").disabled=true;
+document.getElementById("place-order-button").disabled=true;
 showView("processing");
 
 setTimeout(()=>{
 renderReceipt(lastReceipt);
 document.getElementById("checkout-form").reset();
-document.getElementById("pay-button").disabled=false;
+this.reset();
+document.querySelectorAll(".field.invalid").forEach(field=>field.classList.remove("invalid"));
+document.getElementById("place-order-button").disabled=false;
+customerInfo=null;
 showView("confirmation");
 },900);
 });
@@ -443,6 +602,7 @@ document.getElementById("receipt-number").textContent=receipt.number;
 document.getElementById("receipt-name").textContent=receipt.name;
 document.getElementById("receipt-email").textContent=receipt.email;
 document.getElementById("receipt-date").textContent=receipt.date;
+document.getElementById("receipt-address").textContent=receipt.address||"—";
 document.getElementById("receipt-total").textContent=money(receipt.total);
 document.getElementById("receipt-items").innerHTML=receipt.items.map(item=>`
 <div class="receipt-line"><span>${item.name} × ${item.quantity}</span><strong>${money(item.total)}</strong></div>`).join("");
