@@ -664,7 +664,7 @@ document.getElementById("payment-form").addEventListener("submit", function(even
   const entries = Object.entries(cart).filter(([id, qty]) => services[id] && qty > 0);
 
   lastReceipt = {
-    number: "DEMO-" + Date.now().toString(36).toUpperCase(),
+    number: "ORD-" + Date.now().toString(36).toUpperCase(),
     name: customerInfo.name,
     email: customerInfo.email,
     address: `${street}, ${city}, ${state} ${zip}`,
